@@ -2,7 +2,7 @@
   "_help": "Your rules. Change the numbers, keep the names. Amounts are in rupees.",
 
   "capital_inr": 10000,
-  "risk_per_trade_pct": 1.0,
+  "risk_per_trade_pct": 2.0,
   "max_position_pct": 50,
 
   "lists": [
