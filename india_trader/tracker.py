@@ -155,6 +155,7 @@ def stats(picks: pd.DataFrame) -> dict:
         "total_ideas": int(len(picks)),
         "expired": int((picks["status"] == "EXPIRED").sum()) if len(picks) else 0,
         "open": int(picks["status"].isin({"OPEN", "T1_HIT"}).sum()) if len(picks) else 0,
+        "waiting": int((picks["status"] == "WAITING").sum()) if len(picks) else 0,
         "closed": int(len(closed)),
         "wins": int((res > 0).sum()),
         "losses": int((res < 0).sum()),

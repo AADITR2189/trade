@@ -111,9 +111,11 @@ def build_message(run_date: str, data_date: str, mood: dict, picks: list[dict],
     if stats["closed"]:
         lines.append(f"<b>Track record</b>: {stats['closed']} closed trades, {stats['wins']} wins, "
                      f"{stats['losses']} losses, win rate {stats['win_rate']}%, "
-                     f"average {stats['avg_result_pct']:+.2f}% per trade. {stats['open']} still open.")
+                     f"average {stats['avg_result_pct']:+.2f}% per trade. {stats['open']} in trade, "
+                     f"{stats.get('waiting', 0)} waiting for entry.")
     else:
-        lines.append(f"<b>Track record</b>: not enough closed trades yet ({stats['open']} open). "
+        lines.append(f"<b>Track record</b>: no closed trades yet ({stats['open']} in trade, "
+                     f"{stats.get('waiting', 0)} waiting for entry). "
                      f"Paper-trade for 3–4 weeks before using real money.")
     lines += ["", DISCLAIMER]
     return "\n".join(lines)
