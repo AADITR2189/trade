@@ -1,0 +1,27 @@
+{
+  "_help": "Your rules. Change the numbers, keep the names. Amounts are in rupees.",
+
+  "capital_inr": 100000,
+  "risk_per_trade_pct": 1.0,
+  "max_position_pct": 20,
+
+  "top_n": 5,
+  "max_per_sector": 2,
+
+  "min_price": 50,
+  "min_avg_traded_value_cr": 10,
+  "rsi_min": 50,
+  "rsi_max": 75,
+  "adx_min": 20,
+  "max_extension_pct": 10,
+  "max_atr_pct": 6,
+
+  "entry_buffer_pct": 0.2,
+  "stop_atr_multiple": 1.5,
+  "target1_r": 2,
+  "target2_r": 3,
+  "entry_valid_days": 3,
+  "max_hold_days": 15,
+
+  "skip_new_picks_when_market_bearish": false
+}

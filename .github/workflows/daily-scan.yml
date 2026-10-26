@@ -1,0 +1,64 @@
+name: Daily NSE scan
+
+on:
+  schedule:
+    # 02:15 UTC = 7:45 AM India time, Monday to Friday. GitHub can start it up to
+    # ~30 minutes late, which still lands before the 9:15 AM market open.
+    - cron: "15 2 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only print the result (do not send to Telegram or save)"
+        type: boolean
+        default: false
+      force:
+        description: "Run even if NSE is closed today"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Scan and send
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "${{ inputs.force }}" = "true" ]; then ARGS="$ARGS --force"; fi
+          python -m india_trader.main $ARGS
+
+      - name: Save the picks log
+        run: |
+          git config user.name "trade-helper-bot"
+          git config user.email "trade-helper-bot@users.noreply.github.com"
+          git add data/ reports/
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -m "Daily scan $(TZ=Asia/Kolkata date +%Y-%m-%d)"
+            git push
+          fi
