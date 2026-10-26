@@ -153,4 +153,4 @@ python -m india_trader.live --dry-run     # live alerts check, nothing sent or s
 
 - ~~**Step 2:** alerts during market hours (entry triggered, target, stop-loss)~~ done
 - ~~**Step 3:** company announcements, results calendar, news, FII/DII and India VIX~~ done
-- **Step 4:** watchlist, simple web dashboard, read-only link to Zerodha holdings
+- Step 4 (watchlist, holdings, dashboard): not planned; use Zerodha Kite for these. The bot never places orders.
