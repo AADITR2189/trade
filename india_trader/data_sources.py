@@ -21,6 +21,7 @@ UNIVERSE_URLS = [
 YAHOO_URL = "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?range={range}&interval=1d"
 HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) trade-helper/1.0"}
 NIFTY50 = "^NSEI"
+INDIA_VIX = "^INDIAVIX"
 
 
 def _parse_universe(text: str) -> list[dict]:

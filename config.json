@@ -24,5 +24,10 @@
   "entry_valid_days": 3,
   "max_hold_days": 15,
 
-  "skip_new_picks_when_market_bearish": false
+  "skip_new_picks_when_market_bearish": false,
+
+  "avoid_results_within_days": 5,
+  "news_days": 3,
+  "news_bonus": 5,
+  "news_penalty": 15
 }

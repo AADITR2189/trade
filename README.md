@@ -85,6 +85,10 @@ From then on it runs by itself every trading morning (weekends and NSE holidays 
 | `entry_valid_days` | days a pick stays valid if price doesn't cross "Buy above" | 3 |
 | `max_hold_days` | trading days before an open trade is closed | 15 |
 | `skip_new_picks_when_market_bearish` | send no new picks when Nifty is falling | false |
+| `avoid_results_within_days` | skip stocks with results / a board meeting within this many days | 5 |
+| `news_days` | how many days of news and filings to check | 3 |
+| `news_bonus` | points added when recent news looks positive | 5 |
+| `news_penalty` | points taken off when recent news looks negative | 15 |
 
 ## How a stock is chosen
 
@@ -102,6 +106,23 @@ not too jumpy.
 | Breakout | 30 | closing at a 20-day high, close to the 52-week high |
 
 The score shows how well a stock matches the rules. It is **not** a probability of profit.
+
+## News, results and market pulse
+
+For the 15 best technical candidates each morning the bot also checks:
+
+- **Results calendar (NSE):** a stock with results or a board meeting in the next 5 days is skipped,
+  because prices can gap sharply either way on results day. You're also warned when a stock you hold
+  or are waiting to buy has results coming.
+- **Exchange filings (NSE)** and **headlines (Google News)** from the last 3 days. Simple keyword rules
+  tag them: negative (fraud, SEBI action, resignations, downgrades, pledges...) costs 15 points,
+  positive (order wins, buybacks, bonus issues, upgrades...) adds 5. Up to two items are shown with links.
+  Keyword rules are crude: read the story before acting on it.
+- **Market pulse:** India VIX (below 13 calm, 13–18 normal, 18–24 nervous, 24+ fearful) and the
+  previous day's FII and DII net buying or selling in the cash market.
+
+If NSE blocks the bot on some day, the message says which source was unavailable and still sends
+the price-based picks. To test the sources yourself: Actions → **Check data sources** → Run workflow.
 
 ## How results are counted (`data/picks.csv`)
 
@@ -131,5 +152,5 @@ python -m india_trader.live --dry-run     # live alerts check, nothing sent or s
 ## Roadmap
 
 - ~~**Step 2:** alerts during market hours (entry triggered, target, stop-loss)~~ done
-- **Step 3:** NSE/BSE company announcements and results in the score, plus FII/DII and India VIX
+- ~~**Step 3:** company announcements, results calendar, news, FII/DII and India VIX~~ done
 - **Step 4:** watchlist, simple web dashboard, read-only link to Zerodha holdings

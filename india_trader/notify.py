@@ -1,6 +1,7 @@
 """Builds the daily message and sends it to Telegram."""
 import html
 import os
+from datetime import date
 
 import requests
 
@@ -22,22 +23,51 @@ def _inr(x: float, decimals: int = 2) -> str:
     return f"{sign}₹{whole}" + (f".{frac}" if decimals else "")
 
 
+def _crore(x: float) -> str:
+    return f"{'+' if x >= 0 else '−'}₹{abs(x):,.0f} Cr"
+
+
+def _news_line(item: dict) -> str:
+    icon = {"negative": "⚠️", "positive": "✅"}.get(item["sentiment"], "📰")
+    title = html.escape(item["title"])
+    if item.get("link"):
+        title = f'<a href="{html.escape(item["link"], quote=True)}">{title}</a>'
+    when = date.fromisoformat(item["date"]).strftime("%d %b") if item.get("date") else ""
+    return f"   {icon} {title} ({html.escape(item['source'])}{', ' + when if when else ''})"
+
+
 def build_message(run_date: str, data_date: str, mood: dict, picks: list[dict],
-                  events: list[str], stats: dict, cfg: dict, note: str = "") -> str:
+                  events: list[str], stats: dict, cfg: dict, note: str = "",
+                  extra: dict | None = None) -> str:
+    extra = extra or {}
     e = html.escape
     lines = [f"<b>📈 NSE swing setups for {e(run_date)}</b>",
              f"Prices up to the close of {e(data_date)}"]
     icon = {"Bullish": "🟢", "Neutral": "🟡", "Bearish": "🔴"}.get(mood["mood"], "⚪")
     lines.append(f"Market: {icon} <b>{e(mood['mood'])}</b>. {e(mood['detail'])}")
+    pulse = extra.get("pulse") or {}
+    if pulse.get("vix"):
+        v = pulse["vix"]
+        lines.append(f"India VIX: {v['value']:.1f} ({v['change_pct']:+.1f}%), {v['label']}")
+    if pulse.get("fii_dii"):
+        f = pulse["fii_dii"]
+        when = date.fromisoformat(f["date"]).strftime("%d %b") if f.get("date") else ""
+        parts = [f"{k.upper()} {_crore(f[k])}" for k in ("fii", "dii") if k in f]
+        lines.append(f"Cash market flows {when}: " + " · ".join(parts))
     if mood["mood"] == "Bearish":
         lines.append("<i>Market is weak: breakouts fail more often. Consider skipping or using smaller sizes.</i>")
+    if pulse.get("vix") and pulse["vix"]["value"] >= 24:
+        lines.append("<i>VIX is high: expect big swings. Smaller sizes are safer.</i>")
+    if extra.get("down"):
+        lines.append(f"<i>Not available today: {e(', '.join(extra['down']))}. News checks are incomplete.</i>")
     if note:
         lines.append(f"<i>{e(note)}</i>")
     lines.append("")
 
-    if events:
+    if events or extra.get("warnings"):
         lines.append("<b>Updates on earlier picks</b>")
         lines += [e(x) for x in events]
+        lines += [e(x) for x in extra.get("warnings", [])]
         lines.append("")
 
     if picks:
@@ -47,15 +77,25 @@ def build_message(run_date: str, data_date: str, mood: dict, picks: list[dict],
             qty = (f"{p['qty']} shares ≈ {_inr(p['qty'] * p['entry'], 0)}, "
                    f"max loss ≈ {_inr(p['qty'] * (p['entry'] - p['stop']), 0)}"
                    if p["qty"] > 0 else "1 share costs more than your per-stock limit")
+            adj = p.get("news_adj", 0)
+            adj_txt = f" (news {adj:+d})" if adj else ""
             lines += [
                 "",
-                f"<b>{n}. {e(p['symbol'])}</b> · {e(p['name'])} · score {p['score']:.0f}/100",
+                f"<b>{n}. {e(p['symbol'])}</b> · {e(p['name'])} · score {p['score']:.0f}/100{adj_txt}",
                 f"   Buy above: <b>{_inr(p['entry'])}</b> (last close {_inr(p['close'])})",
                 f"   Stop-loss: <b>{_inr(p['stop'])}</b> (−{p['risk_pct']:.1f}%)",
                 f"   Target 1: {_inr(p['target1'])} · Target 2: {_inr(p['target2'])}",
                 f"   Size: {qty}",
                 f"   Why: {e(p['why'])}",
             ]
+            lines += [_news_line(i) for i in p.get("news", [])]
+            ev = p.get("next_event")
+            if ev:
+                lines.append(f"   📅 Next: {e(ev['purpose'] or 'board meeting')} on "
+                             f"{date.fromisoformat(ev['date']).strftime('%d %b')}")
+        if extra.get("skipped"):
+            sk = "; ".join(f"{x['symbol']} ({x['reason']})" for x in extra["skipped"])
+            lines += ["", f"<i>Skipped because results/board meeting are too close: {e(sk)}</i>"]
         if len(picks) < cfg["top_n"]:
             lines += ["", f"<i>Only {len(picks)} stock(s) scored {cfg.get('min_score', 0)}+ today, "
                           "so fewer picks than usual.</i>"]

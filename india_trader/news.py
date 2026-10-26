@@ -15,7 +15,7 @@ import re
 import sys
 import time
 import xml.etree.ElementTree as ET
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from urllib.parse import quote_plus
 
@@ -95,7 +95,7 @@ def google_news(company: str, days: int = 3, limit: int = 5) -> list[dict] | Non
         r = requests.get(url, headers={"User-Agent": BROWSER_HEADERS["User-Agent"]}, timeout=20)
         if not r.ok:
             return None
-        since = datetime.utcnow() - timedelta(days=days)
+        since = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(days=days)
         return parse_rss(r.text, since)[:limit]
     except (requests.RequestException, ET.ParseError):
         return None

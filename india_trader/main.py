@@ -12,7 +12,7 @@ import sys
 from datetime import time as dtime
 from pathlib import Path
 
-from . import data_sources, market_calendar, scanner, tracker
+from . import context, data_sources, market_calendar, news, scanner, tracker
 from .notify import build_message, send_telegram
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -40,9 +40,10 @@ def main(argv=None) -> int:
     ap.add_argument("--demo", action="store_true", help="use made-up prices (implies --dry-run)")
     ap.add_argument("--force", action="store_true", help="run even when NSE is closed today")
     ap.add_argument("--limit", type=int, default=0, help="scan only the first N stocks (testing)")
+    ap.add_argument("--no-news", action="store_true", help="skip news, results calendar and FII/DII")
     args = ap.parse_args(argv)
     if args.demo:
-        args.dry_run = True
+        args.dry_run = args.no_news = True
 
     cfg = load_config()
     now = market_calendar.now_ist()
@@ -68,9 +69,10 @@ def main(argv=None) -> int:
         prices = fake_prices(symbols, today)
         note = "DEMO: made-up prices, not real stocks data."
     else:
-        prices = data_sources.fetch_many(symbols + [data_sources.NIFTY50])
+        prices = data_sources.fetch_many(symbols + [data_sources.NIFTY50, data_sources.INDIA_VIX])
     drop_unfinished_candle(prices, now)
     nifty = prices.pop(data_sources.NIFTY50, None)
+    vix = prices.pop(data_sources.INDIA_VIX, None)
     print(f"Got prices for {len(prices)} of {len(symbols)} stocks.")
     if len(prices) < len(symbols) * 0.5:
         msg = (f"⚠️ Trade helper: price download failed ({len(prices)} of {len(symbols)} stocks). "
@@ -84,16 +86,30 @@ def main(argv=None) -> int:
     picks_log, events = tracker.update(picks_log, prices, cfg)
 
     mood = scanner.market_mood(nifty)
+    extra = {"pulse": None, "skipped": [], "warnings": [], "down": []}
+    nse = meetings = None
+    if not args.no_news:
+        print("Checking results calendar, FII/DII and India VIX ...")
+        nse = news.NSE()
+        meetings = nse.board_meetings()
+        extra["pulse"] = context.market_pulse(nse, vix)
+        active_rows = picks_log[picks_log["status"].isin(tracker.ACTIVE)].to_dict("records")
+        extra["warnings"] = context.holding_warnings(active_rows, meetings, cfg, today)
+
     if mood["mood"] == "Bearish" and cfg["skip_new_picks_when_market_bearish"]:
         picks = []
         note = (note + " " if note else "") + "No new picks: market is bearish (your setting)."
     else:
         fresh = {s: df for s, df in prices.items() if str(df.index[-1]) == data_date}
-        picks = scanner.scan(fresh, universe, cfg, exclude=tracker.active_symbols(picks_log))
+        ranked = scanner.rank(fresh, universe, cfg, exclude=tracker.active_symbols(picks_log))
+        if nse is not None:
+            print(f"Checking news for the top {min(len(ranked), context.MAX_CANDIDATES)} candidates ...")
+            ranked, extra["skipped"], extra["down"] = context.research(ranked, cfg, today, nse, meetings)
+        picks = scanner.select(ranked, cfg)
 
     picks_log = tracker.add(picks_log, picks)
     stats = tracker.stats(picks_log)
-    text = build_message(today.strftime("%a %d %b %Y"), data_date, mood, picks, events, stats, cfg, note)
+    text = build_message(today.strftime("%a %d %b %Y"), data_date, mood, picks, events, stats, cfg, note, extra)
     print("\n" + text + "\n")
 
     if args.dry_run:

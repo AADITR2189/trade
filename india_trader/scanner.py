@@ -120,9 +120,9 @@ def evaluate(df: pd.DataFrame, cfg: dict) -> dict | None:
     }
 
 
-def scan(prices: dict[str, pd.DataFrame], universe: list[dict], cfg: dict,
+def rank(prices: dict[str, pd.DataFrame], universe: list[dict], cfg: dict,
          exclude: set[str] = frozenset()) -> list[dict]:
-    """Rank every stock that passes the rules; best first, with a per-sector limit."""
+    """Every stock that passes the must-have rules, best score first."""
     info = {s["symbol"]: s for s in universe}
     found = []
     for sym, df in prices.items():
@@ -132,11 +132,16 @@ def scan(prices: dict[str, pd.DataFrame], universe: list[dict], cfg: dict,
         if setup:
             found.append({"symbol": sym, "name": info[sym]["name"],
                           "sector": info[sym]["sector"], **setup})
-    found = [s for s in found if s["score"] >= cfg.get("min_score", 0)]
     found.sort(key=lambda x: x["score"], reverse=True)
+    return found
 
+
+def select(ranked: list[dict], cfg: dict) -> list[dict]:
+    """Top picks: at least min_score, at most max_per_sector from one sector, top_n in total."""
     picks, per_sector = [], {}
-    for s in found:
+    for s in sorted(ranked, key=lambda x: x["score"], reverse=True):
+        if s["score"] < cfg.get("min_score", 0):
+            break
         if per_sector.get(s["sector"], 0) >= cfg["max_per_sector"]:
             continue
         picks.append(s)
@@ -144,6 +149,11 @@ def scan(prices: dict[str, pd.DataFrame], universe: list[dict], cfg: dict,
         if len(picks) == cfg["top_n"]:
             break
     return picks
+
+
+def scan(prices: dict[str, pd.DataFrame], universe: list[dict], cfg: dict,
+         exclude: set[str] = frozenset()) -> list[dict]:
+    return select(rank(prices, universe, cfg, exclude), cfg)
 
 
 def market_mood(nifty: pd.DataFrame | None) -> dict:
