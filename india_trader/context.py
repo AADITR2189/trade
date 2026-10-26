@@ -17,7 +17,7 @@ IMPORTANT_FILINGS = ("outcome of board meeting", "financial result", "press rele
                      "bonus", "split", "order", "contract", "award", "fund raising", "allotment",
                      "litigation", "dispute", "default", "fraud", "insolvency", "pledge",
                      "investor presentation", "agreement", "joint venture", "amalgamation")
-MAX_CANDIDATES = 15
+MAX_CANDIDATES = 25
 
 
 def _important(item: dict) -> bool:

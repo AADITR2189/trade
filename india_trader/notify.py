@@ -102,7 +102,10 @@ def build_message(run_date: str, data_date: str, mood: dict, picks: list[dict],
         lines += ["",
                   f"<i>Rules: buy only if the price trades above 'Buy above' within "
                   f"{cfg['entry_valid_days']} trading days. Exit at the stop-loss, no exceptions. "
-                  f"At Target 1 book half and move the stop to your buy price.</i>"]
+                  f"At Target 1 book half and move the stop to your buy price.</i>",
+                  "",
+                  "👉 For live updates on a stock, reply e.g. <code>"
+                  f"{e(picks[0]['symbol'])} start</code>. Send <code>help</code> for all commands."]
     else:
         lines.append(f"No stock passed all the rules with a score of {cfg.get('min_score', 0)}+ today. "
                      "No trade is also a decision.")
@@ -119,6 +122,22 @@ def build_message(run_date: str, data_date: str, mood: dict, picks: list[dict],
                      f"Paper-trade for 3–4 weeks before using real money.")
     lines += ["", DISCLAIMER]
     return "\n".join(lines)
+
+
+def get_updates(offset: int | None, wait_seconds: int = 0) -> list[dict] | None:
+    """Messages sent to the bot since `offset` (Telegram keeps them for 24 hours)."""
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    if not token:
+        return None
+    params = {"timeout": wait_seconds, "allowed_updates": '["message"]'}
+    if offset is not None:
+        params["offset"] = offset
+    try:
+        r = requests.get(f"https://api.telegram.org/bot{token}/getUpdates", params=params,
+                         timeout=wait_seconds + 15)
+        return r.json().get("result", []) if r.ok else None
+    except (requests.RequestException, ValueError):
+        return None
 
 
 def send_telegram(text: str) -> bool:

@@ -8,7 +8,7 @@ from india_trader.demo import fake_series
 from india_trader.main import load_config
 from india_trader.notify import _inr
 
-CFG = load_config()
+CFG = {**load_config(), "max_entry_price": None}
 
 
 def candles(rows, start=date(2026, 11, 2)):
@@ -104,3 +104,12 @@ def test_min_score_filters_weak_setups():
     uni = [{"symbol": "GOOD", "name": "Good Ltd", "sector": "X"}]
     score = scanner.scan(prices, uni, {**CFG, "min_score": 0})[0]["score"]
     assert scanner.scan(prices, uni, {**CFG, "min_score": score + 1}) == []
+
+
+def test_max_entry_price_cap():
+    end = date(2026, 10, 23)
+    df = fake_series(3, end, trend=0.0025, breakout=True)
+    p = scanner.evaluate(df, CFG)
+    assert p is not None
+    assert scanner.evaluate(df, {**CFG, "max_entry_price": p["entry"] - 1}) is None
+    assert scanner.evaluate(df, {**CFG, "max_entry_price": p["entry"] + 1}) is not None

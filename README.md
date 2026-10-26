@@ -5,7 +5,8 @@ Every trading morning at about **7:45 AM India time**, this app:
 1. Downloads the latest daily prices for the **Nifty 500** stocks.
 2. Checks how the market is doing (Nifty 50 trend: Bullish / Neutral / Bearish).
 3. Follows up on earlier picks: entry triggered, target hit, stop-loss hit.
-4. Scans every stock with fixed rules and picks the **top 5 setups** (at most 2 per sector).
+4. Scans every stock with fixed rules and picks the **top 10 setups with a buy price up to ₹500**
+   (at most 2 per sector; change `top_n` and `max_entry_price` in `config.json`).
 5. For each one gives **Buy above**, **Stop-loss**, **Target 1**, **Target 2** and how many
    shares fit your capital and risk.
 6. Sends it all to your **Telegram**, and saves every pick in `data/picks.csv` so the track
@@ -18,20 +19,29 @@ It **never places orders**. You decide and you place every trade yourself.
 > They are not investment advice and not a promise of profit. Watch the track record for
 > 3–4 weeks before risking real money, and only use money you can afford to lose.
 
-### During market hours (live alerts)
+### Live updates for the stocks you choose (Telegram commands)
 
-Every 15 minutes from about 9:20 AM to 3:20 PM, the bot checks the live price of each active pick
-and messages you once per event:
+Send these to your bot in Telegram (capitals don't matter):
 
-- 🟢 **Entry triggered**: price crossed "Buy above"
-- 🎯 **Target 1**: book half, move your stop to your buy price
-- 🏆 **Target 2**: book the rest
-- 🛑 **Stop-loss hit**: exit
-- ↩️ **Back to buy price** after Target 1: exit the rest at breakeven
+| you send | what happens |
+| --- | --- |
+| `IRFC start` | live updates for IRFC; if it was in the morning list, its buy/stop/targets are used |
+| `IRFC start 140 132 155` | live updates with your own buy price, stop-loss and target |
+| `IRFC stop` | stop updates for IRFC |
+| `stop all` | stop all updates |
+| `watch it` | current price of every stock you're watching |
+| `price IRFC` | current price of any NSE stock |
+| `help` | the list of commands |
 
-At about 3:37 PM it sends a **closing summary** of all active picks. No message means nothing
-happened. Live prices come from Yahoo Finance and can lag the exchange by a few minutes, and
-GitHub sometimes starts a check late, so always confirm the price in your broker app before acting.
+Watch as many stocks as you like, for as long as you like (days or months) until you send `stop`.
+While the market is open the bot checks prices **every minute** and messages you when a watched stock:
+🟢 crosses the buy price, 🛑 hits the stop-loss, 🎯 reaches Target 1, 🏆 Target 2, ↩️ falls back to
+the buy price after Target 1, or 📈📉 moves 2% since the last update (`move_alert_pct`). After 3:30 PM
+you get one closing line per watched stock.
+
+The bot answers within seconds during market hours (9:05 AM – 3:45 PM on trading days) and within
+30 minutes at other times. Prices come from Yahoo Finance and can lag the exchange by a few minutes:
+confirm in Kite before acting. Only your Telegram chat can control the bot.
 
 ---
 
@@ -70,7 +80,8 @@ From then on it runs by itself every trading morning (weekends and NSE holidays 
 | `capital_inr` | money set aside for these trades | 1,00,000 |
 | `risk_per_trade_pct` | most you lose on one trade if the stop-loss hits, as % of capital | 1 |
 | `max_position_pct` | most money in one stock, as % of capital | 20 |
-| `top_n` | how many picks per day | 5 |
+| `top_n` | how many picks per day | 10 |
+| `max_entry_price` | only stocks whose buy price is at most this (₹) | 500 |
 | `min_score` | leave out setups scoring below this (out of 100) | 60 |
 | `max_per_sector` | picks allowed from the same sector | 2 |
 | `min_price` | ignore stocks below this price (₹) | 50 |
@@ -82,6 +93,7 @@ From then on it runs by itself every trading morning (weekends and NSE holidays 
 | `entry_buffer_pct` | "Buy above" = yesterday's high + this % | 0.2 |
 | `stop_atr_multiple` | stop-loss distance, in average daily ranges (ATR) | 1.5 |
 | `target1_r` / `target2_r` | targets as multiples of the risk | 2 / 3 |
+| `move_alert_pct` | live update when a watched stock moves this % | 2 |
 | `entry_valid_days` | days a pick stays valid if price doesn't cross "Buy above" | 3 |
 | `max_hold_days` | trading days before an open trade is closed | 15 |
 | `skip_new_picks_when_market_bearish` | send no new picks when Nifty is falling | false |
@@ -146,11 +158,11 @@ pip install -r requirements.txt
 python -m pytest -q                       # tests
 python -m india_trader.main --demo        # made-up prices, offline
 python -m india_trader.main --dry-run     # real prices, nothing sent or saved
-python -m india_trader.live --dry-run     # live alerts check, nothing sent or saved
+python -m india_trader.bot --once         # answer waiting Telegram commands once
 ```
 
 ## Roadmap
 
-- ~~**Step 2:** alerts during market hours (entry triggered, target, stop-loss)~~ done
+- ~~**Step 2:** live alerts~~ done: now only for stocks you `start` in Telegram
 - ~~**Step 3:** company announcements, results calendar, news, FII/DII and India VIX~~ done
 - Step 4 (watchlist, holdings, dashboard): not planned; use Zerodha Kite for these. The bot never places orders.

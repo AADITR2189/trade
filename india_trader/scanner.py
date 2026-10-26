@@ -83,6 +83,8 @@ def evaluate(df: pd.DataFrame, cfg: dict) -> dict | None:
 
     # --- trade plan ----------------------------------------------------------
     entry = _tick_up(float(last["high"]) * (1 + cfg["entry_buffer_pct"] / 100))
+    if cfg.get("max_entry_price") and entry > cfg["max_entry_price"]:
+        return None
     stop = _tick_down(entry - cfg["stop_atr_multiple"] * float(last["atr"]))
     risk = entry - stop
     target1 = _tick_near(entry + cfg["target1_r"] * risk)
