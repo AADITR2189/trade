@@ -20,7 +20,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: daily-scan
+  group: trade-bot
   cancel-in-progress: false
 
 jobs:
@@ -60,5 +60,6 @@ jobs:
             echo "Nothing new to save."
           else
             git commit -m "Daily scan $(TZ=Asia/Kolkata date +%Y-%m-%d)"
+            git pull --rebase
             git push
           fi

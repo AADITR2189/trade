@@ -18,6 +18,21 @@ It **never places orders**. You decide and you place every trade yourself.
 > They are not investment advice and not a promise of profit. Watch the track record for
 > 3–4 weeks before risking real money, and only use money you can afford to lose.
 
+### During market hours (live alerts)
+
+Every 15 minutes from about 9:20 AM to 3:20 PM, the bot checks the live price of each active pick
+and messages you once per event:
+
+- 🟢 **Entry triggered**: price crossed "Buy above"
+- 🎯 **Target 1**: book half, move your stop to your buy price
+- 🏆 **Target 2**: book the rest
+- 🛑 **Stop-loss hit**: exit
+- ↩️ **Back to buy price** after Target 1: exit the rest at breakeven
+
+At about 3:37 PM it sends a **closing summary** of all active picks. No message means nothing
+happened. Live prices come from Yahoo Finance and can lag the exchange by a few minutes, and
+GitHub sometimes starts a check late, so always confirm the price in your broker app before acting.
+
 ---
 
 ## One-time setup (about 10 minutes)
@@ -110,10 +125,11 @@ pip install -r requirements.txt
 python -m pytest -q                       # tests
 python -m india_trader.main --demo        # made-up prices, offline
 python -m india_trader.main --dry-run     # real prices, nothing sent or saved
+python -m india_trader.live --dry-run     # live alerts check, nothing sent or saved
 ```
 
 ## Roadmap
 
-- **Step 2:** alerts during market hours (entry triggered, target, stop-loss)
+- ~~**Step 2:** alerts during market hours (entry triggered, target, stop-loss)~~ done
 - **Step 3:** NSE/BSE company announcements and results in the score, plus FII/DII and India VIX
 - **Step 4:** watchlist, simple web dashboard, read-only link to Zerodha holdings

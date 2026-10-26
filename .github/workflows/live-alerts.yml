@@ -1,0 +1,66 @@
+name: Live alerts
+
+on:
+  schedule:
+    # Every 15 minutes while NSE is open, in UTC (India time = UTC + 5:30):
+    # 03:52 UTC = 9:22 AM, then :07 :22 :37 :52 until 9:52 UTC = 3:22 PM,
+    # and 10:07 UTC = 3:37 PM for the closing summary.
+    # GitHub may start a scheduled run a few minutes late, occasionally later.
+    - cron: "52 3 * * 1-5"
+    - cron: "7,22,37,52 4-9 * * 1-5"
+    - cron: "7 10 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only print the alerts (do not send to Telegram or save)"
+        type: boolean
+        default: true
+      force:
+        description: "Run even outside market hours"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trade-bot
+  cancel-in-progress: false
+
+jobs:
+  alerts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Check prices and alert
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "${{ inputs.force }}" = "true" ]; then ARGS="$ARGS --force"; fi
+          python -m india_trader.live $ARGS
+
+      - name: Remember which alerts were sent
+        run: |
+          git config user.name "trade-helper-bot"
+          git config user.email "trade-helper-bot@users.noreply.github.com"
+          git add data/alert_state.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -m "Live alerts $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M')"
+            git pull --rebase
+            git push
+          fi

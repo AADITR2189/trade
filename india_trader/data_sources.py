@@ -104,3 +104,26 @@ def fetch_many(symbols: list[str], pause: float = 0.25, log=print) -> dict[str, 
                 log(f"  fetched {i}/{len(symbols)} ({len(out)} ok)")
             time.sleep(pause)
     return out
+
+
+def fetch_quote(nse_symbol: str, session: requests.Session | None = None) -> dict | None:
+    """Latest price plus today's high and low so far (Yahoo; may lag the exchange by a few minutes)."""
+    url = YAHOO_URL.format(symbol=quote(yahoo_symbol(nse_symbol)), range="1d").replace("interval=1d", "interval=5m")
+    s = session or requests
+    for attempt in range(3):
+        try:
+            r = s.get(url, headers=HEADERS, timeout=20)
+            if r.status_code == 429 or r.status_code >= 500:
+                time.sleep(2 * (attempt + 1))
+                continue
+            meta = r.json()["chart"]["result"][0]["meta"]
+            return {
+                "last": float(meta["regularMarketPrice"]),
+                "high": float(meta["regularMarketDayHigh"]),
+                "low": float(meta["regularMarketDayLow"]),
+                "prev_close": float(meta.get("chartPreviousClose") or meta.get("previousClose") or 0),
+                "time": pd.Timestamp(meta["regularMarketTime"], unit="s", tz="UTC").tz_convert("Asia/Kolkata"),
+            }
+        except (requests.RequestException, KeyError, IndexError, TypeError, ValueError):
+            time.sleep(1 + attempt)
+    return None
