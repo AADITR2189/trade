@@ -1,5 +1,5 @@
 {
-  "offset": 7,
+  "offset": 982493548,
   "stocks": {
     "CYIENT": {
       "fired": [],
@@ -11,6 +11,17 @@
         "target2": 1511.9
       },
       "since": "27 Oct 2026"
+    },
+    "NAZARA": {
+      "fired": [],
+      "last_alert_price": 402.0,
+      "levels": {
+        "entry": 402.0,
+        "stop": 380.0,
+        "target1": 450.0,
+        "target2": null
+      },
+      "since": "26 Oct 2026"
     }
   },
   "summary_date": null
