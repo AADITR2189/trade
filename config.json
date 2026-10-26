@@ -1,9 +1,9 @@
 {
   "_help": "Your rules. Change the numbers, keep the names. Amounts are in rupees.",
 
-  "capital_inr": 100000,
+  "capital_inr": 10000,
   "risk_per_trade_pct": 1.0,
-  "max_position_pct": 20,
+  "max_position_pct": 50,
 
   "lists": [
     {"title": "Top 5 at any price (Nifty 500)", "universe": "nifty500", "top_n": 5, "max_entry_price": null},

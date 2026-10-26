@@ -93,6 +93,12 @@ def evaluate(df: pd.DataFrame, cfg: dict) -> dict | None:
     risk_money = cfg["capital_inr"] * cfg["risk_per_trade_pct"] / 100
     max_money = cfg["capital_inr"] * cfg["max_position_pct"] / 100
     qty = int(min(risk_money // risk, max_money // entry)) if risk > 0 else 0
+    if qty:
+        qty_note = ""
+    elif entry > max_money:
+        qty_note = f"1 share (₹{entry:,.0f}) is more than your ₹{max_money:,.0f} per-stock limit"
+    else:
+        qty_note = f"1 share risks ₹{risk:,.0f}, more than your ₹{risk_money:,.0f} per-trade risk limit"
 
     reasons = []
     if near_20 >= 0.9995:
@@ -115,6 +121,7 @@ def evaluate(df: pd.DataFrame, cfg: dict) -> dict | None:
         "target2": target2,
         "risk_pct": round(risk / entry * 100, 2),
         "qty": qty,
+        "qty_note": qty_note,
         "rsi": round(float(r), 1),
         "adx": round(float(last["adx"]), 1),
         "vol_ratio": round(float(vol_ratio), 2),

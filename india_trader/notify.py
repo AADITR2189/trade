@@ -40,7 +40,7 @@ def _pick_lines(n: int, p: dict) -> list[str]:
     e = html.escape
     qty = (f"{p['qty']} shares ≈ {_inr(p['qty'] * p['entry'], 0)}, "
            f"max loss ≈ {_inr(p['qty'] * (p['entry'] - p['stop']), 0)}"
-           if p["qty"] > 0 else "1 share costs more than your per-stock limit")
+           if p["qty"] > 0 else f"skip: {p.get('qty_note') or 'too costly for your limits'}")
     adj = p.get("news_adj", 0)
     adj_txt = f" (news {adj:+d})" if adj else ""
     lines = [

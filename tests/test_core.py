@@ -126,3 +126,13 @@ def test_parse_all_nse_keeps_eq_series_only():
             "IRFC,Indian Railway Finance Corporation Limited,EQ,29-JAN-2021\n"
             "XYZ,Trade For Trade Ltd,BE,01-JAN-2020\n")
     assert parse_all_nse(text) == [{"symbol": "IRFC", "name": "Indian Railway Finance Corporation Limited"}]
+
+
+def test_small_capital_sizing_explains_zero_shares():
+    end = date(2026, 10, 23)
+    df = fake_series(3, end, trend=0.0025, breakout=True)
+    p = scanner.evaluate(df, {**CFG, "capital_inr": 10000, "risk_per_trade_pct": 1, "max_position_pct": 50})
+    risk = p["entry"] - p["stop"]
+    assert p["qty"] == int(min(100 // risk, 5000 // p["entry"]))
+    tiny = scanner.evaluate(df, {**CFG, "capital_inr": 500, "risk_per_trade_pct": 1, "max_position_pct": 50})
+    assert tiny["qty"] == 0 and "limit" in tiny["qty_note"]

@@ -81,9 +81,9 @@ From then on it runs by itself every trading morning (weekends and NSE holidays 
 
 | setting | meaning | default |
 | --- | --- | --- |
-| `capital_inr` | money set aside for these trades | 1,00,000 |
+| `capital_inr` | money set aside for these trades | 10,000 |
 | `risk_per_trade_pct` | most you lose on one trade if the stop-loss hits, as % of capital | 1 |
-| `max_position_pct` | most money in one stock, as % of capital | 20 |
+| `max_position_pct` | most money in one stock, as % of capital | 50 |
 | `lists` | the morning lists: title, `universe` (`nifty500` / `all_nse`), `top_n`, `max_entry_price` | 5 any price + 10 up to ₹500 |
 | `min_score` | leave out setups scoring below this (out of 100) | 60 |
 | `max_per_sector` | picks allowed from the same sector | 2 |
