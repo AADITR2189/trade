@@ -15,13 +15,17 @@ on:
         description: "Run even if NSE is closed today"
         type: boolean
         default: false
+      test_send:
+        description: "Send a TEST message to Telegram (nothing saved)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
 
 concurrency:
   # Test runs (dry run) save nothing, so they don't need to wait for the bot.
-  group: ${{ inputs.dry_run && 'dry-run' || 'trade-bot' }}
+  group: ${{ (inputs.dry_run || inputs.test_send) && 'dry-run' || 'trade-bot' }}
   cancel-in-progress: false
 
 jobs:
@@ -50,9 +54,11 @@ jobs:
           ARGS=""
           if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
           if [ "${{ inputs.force }}" = "true" ]; then ARGS="$ARGS --force"; fi
+          if [ "${{ inputs.test_send }}" = "true" ]; then ARGS="$ARGS --test-send"; fi
           python -m india_trader.main $ARGS
 
       - name: Save the picks log
+        if: ${{ !inputs.dry_run && !inputs.test_send }}
         run: |
           git config user.name "trade-helper-bot"
           git config user.email "trade-helper-bot@users.noreply.github.com"

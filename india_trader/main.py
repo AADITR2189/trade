@@ -40,10 +40,14 @@ def main(argv=None) -> int:
     ap.add_argument("--demo", action="store_true", help="use made-up prices (implies --dry-run)")
     ap.add_argument("--force", action="store_true", help="run even when NSE is closed today")
     ap.add_argument("--limit", type=int, default=0, help="scan only the first N stocks (testing)")
+    ap.add_argument("--test-send", action="store_true",
+                    help="send the message to Telegram marked as a test; save nothing")
     ap.add_argument("--no-news", action="store_true", help="skip news, results calendar and FII/DII")
     args = ap.parse_args(argv)
     if args.demo:
         args.dry_run = args.no_news = True
+    if args.test_send:
+        args.dry_run = True
 
     cfg = load_config()
     now = market_calendar.now_ist()
@@ -131,6 +135,10 @@ def main(argv=None) -> int:
     text = build_message(today.strftime("%a %d %b %Y"), data_date, mood, sections, events, stats, cfg, note, extra)
     print("\n" + text + "\n")
 
+    if args.test_send:
+        send_telegram("🧪 <b>TEST MESSAGE</b> (nothing saved; the real one comes at 7:45 AM)\n\n" + text)
+        print("(test: sent to Telegram, nothing saved)")
+        return 0
     if args.dry_run:
         print("(dry run: nothing sent or saved)")
         return 0
