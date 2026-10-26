@@ -132,6 +132,7 @@ def scan(prices: dict[str, pd.DataFrame], universe: list[dict], cfg: dict,
         if setup:
             found.append({"symbol": sym, "name": info[sym]["name"],
                           "sector": info[sym]["sector"], **setup})
+    found = [s for s in found if s["score"] >= cfg.get("min_score", 0)]
     found.sort(key=lambda x: x["score"], reverse=True)
 
     picks, per_sector = [], {}

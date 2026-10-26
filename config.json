@@ -6,6 +6,7 @@
   "max_position_pct": 20,
 
   "top_n": 5,
+  "min_score": 60,
   "max_per_sector": 2,
 
   "min_price": 50,

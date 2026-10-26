@@ -96,3 +96,11 @@ def test_tracker_update_and_stats():
     assert log.loc[0, "status"] == "SL_HIT" and "stop-loss" in events[0]
     st = tracker.stats(log)
     assert st["closed"] == 1 and st["losses"] == 1 and st["win_rate"] == 0.0
+
+
+def test_min_score_filters_weak_setups():
+    end = date(2026, 10, 23)
+    prices = {"GOOD": fake_series(3, end, trend=0.0025, breakout=True)}
+    uni = [{"symbol": "GOOD", "name": "Good Ltd", "sector": "X"}]
+    score = scanner.scan(prices, uni, {**CFG, "min_score": 0})[0]["score"]
+    assert scanner.scan(prices, uni, {**CFG, "min_score": score + 1}) == []

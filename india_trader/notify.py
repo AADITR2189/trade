@@ -56,12 +56,16 @@ def build_message(run_date: str, data_date: str, mood: dict, picks: list[dict],
                 f"   Size: {qty}",
                 f"   Why: {e(p['why'])}",
             ]
+        if len(picks) < cfg["top_n"]:
+            lines += ["", f"<i>Only {len(picks)} stock(s) scored {cfg.get('min_score', 0)}+ today, "
+                          "so fewer picks than usual.</i>"]
         lines += ["",
                   f"<i>Rules: buy only if the price trades above 'Buy above' within "
                   f"{cfg['entry_valid_days']} trading days. Exit at the stop-loss, no exceptions. "
                   f"At Target 1 book half and move the stop to your buy price.</i>"]
     else:
-        lines.append("No stock passed all the rules today. No trade is also a decision.")
+        lines.append(f"No stock passed all the rules with a score of {cfg.get('min_score', 0)}+ today. "
+                     "No trade is also a decision.")
 
     lines.append("")
     if stats["closed"]:

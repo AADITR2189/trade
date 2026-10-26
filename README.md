@@ -56,6 +56,7 @@ From then on it runs by itself every trading morning (weekends and NSE holidays 
 | `risk_per_trade_pct` | most you lose on one trade if the stop-loss hits, as % of capital | 1 |
 | `max_position_pct` | most money in one stock, as % of capital | 20 |
 | `top_n` | how many picks per day | 5 |
+| `min_score` | leave out setups scoring below this (out of 100) | 60 |
 | `max_per_sector` | picks allowed from the same sector | 2 |
 | `min_price` | ignore stocks below this price (₹) | 50 |
 | `min_avg_traded_value_cr` | ignore stocks trading less than this per day (₹ crore) | 10 |
