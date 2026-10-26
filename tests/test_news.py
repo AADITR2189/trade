@@ -118,3 +118,12 @@ def test_message_shows_pulse_news_and_skips():
     assert "Not available today: Google News" in text
     assert "━━ Top 5 at any price ━━" in text and "━━ Top 10 up to ₹500 ━━" in text
     assert "Only 1 stock(s)" in text and "No stock passed" in text and "ABC start" in text
+
+
+def test_headline_must_mention_the_company():
+    assert news.mentions("Oriental Hotels shares jump 8% on strong bookings", "Oriental Hotels Limited")
+    assert not news.mentions("Demand-supply mismatch to drive gains for Indian Hotels", "Oriental Hotels Limited")
+    assert news.mentions("Nazara Technologies posts record revenue", "Nazara Technologies Limited")
+    assert not news.mentions("Top stocks to watch today: Paytm, Infosys | Full list", "Nazara Technologies Limited")
+    assert news.mentions("Cyient bags order from Airbus", "Cyient Ltd.")
+    assert not news.mentions("Gokaldas eyes Europe to cut US reliance", "Reliance Industries Ltd.")

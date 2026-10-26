@@ -64,6 +64,13 @@ def short_name(company: str) -> str:
     return re.sub(r"\s*\(.*?\)\s*", " ", name).strip()
 
 
+def mentions(title: str, company: str) -> bool:
+    """True when the headline names the company itself, not just a similar word."""
+    name = short_name(company).lower()
+    name = re.sub(r"\b(india|limited|ltd|corporation|corp|company|co)\b\.?", "", name).strip(" .,&")
+    return bool(name) and re.search(r"\b" + re.escape(name) + r"\b", title.lower()) is not None
+
+
 # --- Google News -----------------------------------------------------------------
 
 def parse_rss(xml_text: str, since: datetime) -> list[dict]:
@@ -96,7 +103,7 @@ def google_news(company: str, days: int = 3, limit: int = 5) -> list[dict] | Non
         if not r.ok:
             return None
         since = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(days=days)
-        return parse_rss(r.text, since)[:limit]
+        return [i for i in parse_rss(r.text, since) if mentions(i["title"], company)][:limit]
     except (requests.RequestException, ET.ParseError):
         return None
 
