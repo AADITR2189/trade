@@ -58,7 +58,9 @@ def check_pick(row: dict, q: dict, sent: list[str]) -> list[tuple[str, str]]:
     if status == "WAITING" and "entry" not in sent:
         if q["high"] < entry:
             return out
-        out.append(("entry", f"🟢 <b>{sym}</b>: crossed Buy above {_inr(entry)}, {now}. "
+        where = (now if q["last"] >= entry
+                 else f"earlier today, now back at {_inr(q['last'])} (high {_inr(q['high'])})")
+        out.append(("entry", f"🟢 <b>{sym}</b>: crossed Buy above {_inr(entry)}, {where}. "
                              f"Entry triggered. Stop-loss {_inr(stop)}, Target 1 {_inr(t1)}."))
         hi, lo = q["last"], q["last"]
     in_trade = status in ("OPEN", "T1_HIT") or out or "entry" in sent
