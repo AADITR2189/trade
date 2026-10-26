@@ -8,7 +8,7 @@ from india_trader.demo import fake_series
 from india_trader.main import load_config
 from india_trader.notify import _inr
 
-CFG = {**load_config(), "max_entry_price": None}
+CFG = {**load_config(), "top_n": 5, "max_entry_price": None}
 
 
 def candles(rows, start=date(2026, 11, 2)):
@@ -113,3 +113,16 @@ def test_max_entry_price_cap():
     assert p is not None
     assert scanner.evaluate(df, {**CFG, "max_entry_price": p["entry"] - 1}) is None
     assert scanner.evaluate(df, {**CFG, "max_entry_price": p["entry"] + 1}) is not None
+
+
+def test_unknown_sector_has_no_sector_limit():
+    picks = [{"symbol": f"S{i}", "sector": "", "score": 90 - i} for i in range(4)]
+    assert len(scanner.select(picks, {**CFG, "max_per_sector": 2, "top_n": 10})) == 4
+
+
+def test_parse_all_nse_keeps_eq_series_only():
+    from india_trader.data_sources import parse_all_nse
+    text = ("SYMBOL,NAME OF COMPANY, SERIES, DATE OF LISTING\n"
+            "IRFC,Indian Railway Finance Corporation Limited,EQ,29-JAN-2021\n"
+            "XYZ,Trade For Trade Ltd,BE,01-JAN-2020\n")
+    assert parse_all_nse(text) == [{"symbol": "IRFC", "name": "Indian Railway Finance Corporation Limited"}]

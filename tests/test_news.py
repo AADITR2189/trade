@@ -105,12 +105,16 @@ def test_message_shows_pulse_news_and_skips():
             "next_event": {"date": "2026-11-12", "purpose": "Financial Results", "results": True}}
     extra = {"pulse": {"vix": {"value": 17.3, "change_pct": 2.8, "label": "normal"},
                        "fii_dii": {"fii": 887.65, "dii": -12.0, "date": "2026-10-23"}},
-             "skipped": [{"symbol": "RES", "reason": "Financial Results on 28 Oct"}],
              "warnings": [], "down": ["Google News"]}
+    sections = [{"title": "Top 5 at any price", "top_n": 5, "picks": [pick],
+                 "skipped": [{"symbol": "RES", "reason": "Financial Results on 28 Oct"}]},
+                {"title": "Top 10 up to ₹500", "top_n": 10, "picks": [], "skipped": []}]
     stats = {"closed": 0, "open": 0, "wins": 0, "losses": 0, "win_rate": None, "avg_result_pct": None}
-    text = build_message("Tue", "2026-10-23", {"mood": "Neutral", "detail": "d"}, [pick], [], stats,
+    text = build_message("Tue", "2026-10-23", {"mood": "Neutral", "detail": "d"}, sections, [], stats,
                          CFG, "", extra)
     assert "India VIX: 17.3" in text and "FII +₹888 Cr" in text and "DII −₹12 Cr" in text
     assert "(news +5)" in text and "&lt;big&gt;" in text and 'href="https://x/?a=1&amp;b=2"' in text
     assert "RES (Financial Results on 28 Oct)" in text and "12 Nov" in text
     assert "Not available today: Google News" in text
+    assert "━━ Top 5 at any price ━━" in text and "━━ Top 10 up to ₹500 ━━" in text
+    assert "Only 1 stock(s)" in text and "No stock passed" in text and "ABC start" in text

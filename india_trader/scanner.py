@@ -144,10 +144,12 @@ def select(ranked: list[dict], cfg: dict) -> list[dict]:
     for s in sorted(ranked, key=lambda x: x["score"], reverse=True):
         if s["score"] < cfg.get("min_score", 0):
             break
-        if per_sector.get(s["sector"], 0) >= cfg["max_per_sector"]:
+        sector = s["sector"] or None  # unknown sector: no limit
+        if sector and per_sector.get(sector, 0) >= cfg["max_per_sector"]:
             continue
         picks.append(s)
-        per_sector[s["sector"]] = per_sector.get(s["sector"], 0) + 1
+        if sector:
+            per_sector[sector] = per_sector.get(sector, 0) + 1
         if len(picks) == cfg["top_n"]:
             break
     return picks

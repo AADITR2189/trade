@@ -5,12 +5,14 @@
   "risk_per_trade_pct": 1.0,
   "max_position_pct": 20,
 
-  "top_n": 10,
+  "lists": [
+    {"title": "Top 5 at any price (Nifty 500)", "universe": "nifty500", "top_n": 5, "max_entry_price": null},
+    {"title": "Top 10 with buy price up to ₹500 (all NSE stocks)", "universe": "all_nse", "top_n": 10, "max_entry_price": 500}
+  ],
   "min_score": 60,
   "max_per_sector": 2,
 
   "min_price": 50,
-  "max_entry_price": 500,
   "min_avg_traded_value_cr": 10,
   "rsi_min": 50,
   "rsi_max": 75,

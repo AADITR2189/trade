@@ -36,7 +36,30 @@ def _news_line(item: dict) -> str:
     return f"   {icon} {title} ({html.escape(item['source'])}{', ' + when if when else ''})"
 
 
-def build_message(run_date: str, data_date: str, mood: dict, picks: list[dict],
+def _pick_lines(n: int, p: dict) -> list[str]:
+    e = html.escape
+    qty = (f"{p['qty']} shares ≈ {_inr(p['qty'] * p['entry'], 0)}, "
+           f"max loss ≈ {_inr(p['qty'] * (p['entry'] - p['stop']), 0)}"
+           if p["qty"] > 0 else "1 share costs more than your per-stock limit")
+    adj = p.get("news_adj", 0)
+    adj_txt = f" (news {adj:+d})" if adj else ""
+    lines = [
+        f"<b>{n}. {e(p['symbol'])}</b> · {e(p['name'])} · score {p['score']:.0f}/100{adj_txt}",
+        f"   Buy above: <b>{_inr(p['entry'])}</b> (last close {_inr(p['close'])})",
+        f"   Stop-loss: <b>{_inr(p['stop'])}</b> (−{p['risk_pct']:.1f}%)",
+        f"   Target 1: {_inr(p['target1'])} · Target 2: {_inr(p['target2'])}",
+        f"   Size: {qty}",
+        f"   Why: {e(p['why'])}",
+    ]
+    lines += [_news_line(i) for i in p.get("news", [])]
+    ev = p.get("next_event")
+    if ev:
+        lines.append(f"   📅 Next: {e(ev['purpose'] or 'board meeting')} on "
+                     f"{date.fromisoformat(ev['date']).strftime('%d %b')}")
+    return lines
+
+
+def build_message(run_date: str, data_date: str, mood: dict, sections: list[dict],
                   events: list[str], stats: dict, cfg: dict, note: str = "",
                   extra: dict | None = None) -> str:
     extra = extra or {}
@@ -70,45 +93,30 @@ def build_message(run_date: str, data_date: str, mood: dict, picks: list[dict],
         lines += [e(x) for x in extra.get("warnings", [])]
         lines.append("")
 
-    if picks:
-        lines.append(f"<b>Top {len(picks)} setups</b> (capital {_inr(cfg['capital_inr'], 0)}, "
-                     f"risk {cfg['risk_per_trade_pct']}% per trade)")
-        for n, p in enumerate(picks, 1):
-            qty = (f"{p['qty']} shares ≈ {_inr(p['qty'] * p['entry'], 0)}, "
-                   f"max loss ≈ {_inr(p['qty'] * (p['entry'] - p['stop']), 0)}"
-                   if p["qty"] > 0 else "1 share costs more than your per-stock limit")
-            adj = p.get("news_adj", 0)
-            adj_txt = f" (news {adj:+d})" if adj else ""
-            lines += [
-                "",
-                f"<b>{n}. {e(p['symbol'])}</b> · {e(p['name'])} · score {p['score']:.0f}/100{adj_txt}",
-                f"   Buy above: <b>{_inr(p['entry'])}</b> (last close {_inr(p['close'])})",
-                f"   Stop-loss: <b>{_inr(p['stop'])}</b> (−{p['risk_pct']:.1f}%)",
-                f"   Target 1: {_inr(p['target1'])} · Target 2: {_inr(p['target2'])}",
-                f"   Size: {qty}",
-                f"   Why: {e(p['why'])}",
-            ]
-            lines += [_news_line(i) for i in p.get("news", [])]
-            ev = p.get("next_event")
-            if ev:
-                lines.append(f"   📅 Next: {e(ev['purpose'] or 'board meeting')} on "
-                             f"{date.fromisoformat(ev['date']).strftime('%d %b')}")
-        if extra.get("skipped"):
-            sk = "; ".join(f"{x['symbol']} ({x['reason']})" for x in extra["skipped"])
+    all_picks = [p for sec in sections for p in sec["picks"]]
+    lines.append(f"<i>Sizes for capital {_inr(cfg['capital_inr'], 0)}, "
+                 f"risk {cfg['risk_per_trade_pct']}% per trade.</i>")
+    for sec in sections:
+        lines += ["", f"<b>━━ {e(sec['title'])} ━━</b>"]
+        if not sec["picks"]:
+            lines.append(f"No stock passed all the rules with a score of {cfg.get('min_score', 0)}+ today. "
+                         "No trade is also a decision.")
+        for n, p in enumerate(sec["picks"], 1):
+            lines += [""] + _pick_lines(n, p)
+        if sec.get("skipped"):
+            sk = "; ".join(f"{x['symbol']} ({x['reason']})" for x in sec["skipped"])
             lines += ["", f"<i>Skipped because results/board meeting are too close: {e(sk)}</i>"]
-        if len(picks) < cfg["top_n"]:
-            lines += ["", f"<i>Only {len(picks)} stock(s) scored {cfg.get('min_score', 0)}+ today, "
-                          "so fewer picks than usual.</i>"]
+        if sec["picks"] and len(sec["picks"]) < sec["top_n"]:
+            lines += ["", f"<i>Only {len(sec['picks'])} stock(s) scored {cfg.get('min_score', 0)}+ "
+                          "for this list today.</i>"]
+    if all_picks:
         lines += ["",
                   f"<i>Rules: buy only if the price trades above 'Buy above' within "
                   f"{cfg['entry_valid_days']} trading days. Exit at the stop-loss, no exceptions. "
                   f"At Target 1 book half and move the stop to your buy price.</i>",
                   "",
                   "👉 For live updates on a stock, reply e.g. <code>"
-                  f"{e(picks[0]['symbol'])} start</code>. Send <code>help</code> for all commands."]
-    else:
-        lines.append(f"No stock passed all the rules with a score of {cfg.get('min_score', 0)}+ today. "
-                     "No trade is also a decision.")
+                  f"{e(all_picks[0]['symbol'])} start</code>. Send <code>help</code> for all commands."]
 
     lines.append("")
     if stats["closed"]:

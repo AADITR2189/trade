@@ -5,8 +5,12 @@ Every trading morning at about **7:45 AM India time**, this app:
 1. Downloads the latest daily prices for the **Nifty 500** stocks.
 2. Checks how the market is doing (Nifty 50 trend: Bullish / Neutral / Bearish).
 3. Follows up on earlier picks: entry triggered, target hit, stop-loss hit.
-4. Scans every stock with fixed rules and picks the **top 10 setups with a buy price up to ₹500**
-   (at most 2 per sector; change `top_n` and `max_entry_price` in `config.json`).
+4. Scans with fixed rules and sends two lists (at most 2 per sector, no stock in both):
+   - **Top 5 at any price**, from the Nifty 500
+   - **Top 10 with a buy price up to ₹500**, from **all ~2,000 NSE main-board stocks**
+
+   Change the lists under `lists` in `config.json` (`top_n`, `max_entry_price`, and `universe`:
+   `nifty500` or `all_nse`).
 5. For each one gives **Buy above**, **Stop-loss**, **Target 1**, **Target 2** and how many
    shares fit your capital and risk.
 6. Sends it all to your **Telegram**, and saves every pick in `data/picks.csv` so the track
@@ -80,8 +84,7 @@ From then on it runs by itself every trading morning (weekends and NSE holidays 
 | `capital_inr` | money set aside for these trades | 1,00,000 |
 | `risk_per_trade_pct` | most you lose on one trade if the stop-loss hits, as % of capital | 1 |
 | `max_position_pct` | most money in one stock, as % of capital | 20 |
-| `top_n` | how many picks per day | 10 |
-| `max_entry_price` | only stocks whose buy price is at most this (₹) | 500 |
+| `lists` | the morning lists: title, `universe` (`nifty500` / `all_nse`), `top_n`, `max_entry_price` | 5 any price + 10 up to ₹500 |
 | `min_score` | leave out setups scoring below this (out of 100) | 60 |
 | `max_per_sector` | picks allowed from the same sector | 2 |
 | `min_price` | ignore stocks below this price (₹) | 50 |
@@ -147,6 +150,10 @@ brokerage and taxes.
 ## Data sources
 
 - Nifty 500 list: niftyindices.com (a saved copy is in `data/nifty500.csv`).
+- All NSE stocks: NSE's EQUITY_L.csv, main-board "EQ" series only (saved in `data/nse_equity.csv`);
+  sectors from the Nifty Total Market list where known (`data/sectors.csv`). Stocks with an unknown
+  sector are not limited by `max_per_sector`. The ₹10 Cr/day trading and ₹50 minimum price rules
+  still apply, which keeps out illiquid and penny stocks.
 - Prices: Yahoo Finance's free daily data (end of day, unofficial). If it stops working, the
   app sends a warning instead of picks; the fix is to switch to a broker's data feed.
 - NSE holidays 2026: in `india_trader/market_calendar.py`. Add 2027 when NSE publishes it.

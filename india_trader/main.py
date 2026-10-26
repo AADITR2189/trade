@@ -57,13 +57,18 @@ def main(argv=None) -> int:
 
     if not args.demo and data_sources.refresh_universe():
         print("Nifty 500 list refreshed.")
-    universe = data_sources.load_universe()
+    if not args.demo and data_sources.refresh_all_nse():
+        print("All-NSE stock list refreshed.")
+    universes = {"nifty500": data_sources.load_universe(), "all_nse": data_sources.load_all_nse()}
+    if universes["all_nse"] is None:
+        universes["all_nse"] = universes["nifty500"]
+        note = (note + " " if note else "") + "List of all NSE stocks unavailable; using the Nifty 500 for every list."
     if args.limit:
-        universe = universe[: args.limit]
+        universes = {k: v[: args.limit] for k, v in universes.items()}
     picks_log = tracker.load()
-    symbols = sorted({s["symbol"] for s in universe} | tracker.active_symbols(picks_log))
+    symbols = sorted({s["symbol"] for u in universes.values() for s in u} | tracker.active_symbols(picks_log))
 
-    print(f"Fetching prices for {len(symbols)} stocks + Nifty 50 ...")
+    print(f"Fetching prices for {len(symbols)} stocks + Nifty 50 + India VIX ...")
     if args.demo:
         from .demo import fake_prices
         prices = fake_prices(symbols, today)
@@ -96,20 +101,34 @@ def main(argv=None) -> int:
         active_rows = picks_log[picks_log["status"].isin(tracker.ACTIVE)].to_dict("records")
         extra["warnings"] = context.holding_warnings(active_rows, meetings, cfg, today)
 
+    sections, picks = [], []
     if mood["mood"] == "Bearish" and cfg["skip_new_picks_when_market_bearish"]:
-        picks = []
         note = (note + " " if note else "") + "No new picks: market is bearish (your setting)."
     else:
         fresh = {s: df for s, df in prices.items() if str(df.index[-1]) == data_date}
-        ranked = scanner.rank(fresh, universe, cfg, exclude=tracker.active_symbols(picks_log))
-        if nse is not None:
-            print(f"Checking news for the top {min(len(ranked), context.MAX_CANDIDATES)} candidates ...")
-            ranked, extra["skipped"], extra["down"] = context.research(ranked, cfg, today, nse, meetings)
-        picks = scanner.select(ranked, cfg)
+        taken = set(tracker.active_symbols(picks_log))
+        down = set()
+        for lst in cfg["lists"]:
+            lcfg = {**cfg, "top_n": lst["top_n"], "max_entry_price": lst.get("max_entry_price")}
+            ranked = scanner.rank(fresh, universes[lst["universe"]], lcfg, exclude=taken)
+            skipped = []
+            if nse is not None:
+                print(f"{lst['title']}: checking news for the top "
+                      f"{min(len(ranked), context.MAX_CANDIDATES)} candidates ...")
+                ranked, skipped, d = context.research(ranked, lcfg, today, nse, meetings)
+                down |= set(d)
+            chosen = scanner.select(ranked, lcfg)
+            for p in chosen:
+                p["list"] = lst["title"]
+            taken |= {p["symbol"] for p in chosen}
+            picks += chosen
+            sections.append({"title": lst["title"], "top_n": lst["top_n"], "picks": chosen,
+                             "skipped": skipped})
+        extra["down"] = sorted(down)
 
     picks_log = tracker.add(picks_log, picks)
     stats = tracker.stats(picks_log)
-    text = build_message(today.strftime("%a %d %b %Y"), data_date, mood, picks, events, stats, cfg, note, extra)
+    text = build_message(today.strftime("%a %d %b %Y"), data_date, mood, sections, events, stats, cfg, note, extra)
     print("\n" + text + "\n")
 
     if args.dry_run:

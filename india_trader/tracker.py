@@ -20,12 +20,12 @@ from .notify import _inr
 PICKS_FILE = Path(__file__).resolve().parent.parent / "data" / "picks.csv"
 COLUMNS = ["signal_date", "symbol", "name", "sector", "score", "entry", "stop", "target1",
            "target2", "qty", "status", "entry_date", "fill_price", "exit_date", "exit_price",
-           "result_pct"]
+           "result_pct", "list"]
 ACTIVE = {"WAITING", "OPEN", "T1_HIT"}
 CLOSED = {"SL_HIT", "T2_HIT", "BREAKEVEN_AFTER_T1", "TIMED_OUT"}
 
 
-TEXT_COLUMNS = ["signal_date", "symbol", "name", "sector", "status", "entry_date", "exit_date"]
+TEXT_COLUMNS = ["signal_date", "symbol", "name", "sector", "status", "entry_date", "exit_date", "list"]
 
 
 def _text_columns(picks: pd.DataFrame) -> pd.DataFrame:
@@ -36,7 +36,8 @@ def _text_columns(picks: pd.DataFrame) -> pd.DataFrame:
 
 def load(path: Path = PICKS_FILE) -> pd.DataFrame:
     if path.exists():
-        return _text_columns(pd.read_csv(path, dtype={c: str for c in TEXT_COLUMNS}))
+        df = pd.read_csv(path, dtype={c: str for c in TEXT_COLUMNS})
+        return _text_columns(df.reindex(columns=COLUMNS))
     return pd.DataFrame(columns=COLUMNS)
 
 
@@ -48,7 +49,7 @@ def add(picks: pd.DataFrame, new: list[dict]) -> pd.DataFrame:
     rows = [{
         "signal_date": p["date"], "symbol": p["symbol"], "name": p["name"], "sector": p["sector"],
         "score": p["score"], "entry": p["entry"], "stop": p["stop"], "target1": p["target1"],
-        "target2": p["target2"], "qty": p["qty"], "status": "WAITING",
+        "target2": p["target2"], "qty": p["qty"], "status": "WAITING", "list": p.get("list", ""),
     } for p in new]
     if not rows:
         return picks
