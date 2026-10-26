@@ -3,7 +3,7 @@
   "stocks": {
     "CYIENT": {
       "fired": [],
-      "last_alert_price": 1260.0,
+      "last_alert_price": 1234.1,
       "levels": {
         "entry": 1270.55,
         "stop": 1190.1,
