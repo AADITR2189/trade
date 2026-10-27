@@ -1,6 +1,8 @@
-signal_date,symbol,name,sector,score,entry,stop,target1,target2,qty,status,entry_date,fill_price,exit_date,exit_price,result_pct
-2026-10-23,CYIENT,Cyient Ltd.,Information Technology,92.9,1270.55,1190.1,1431.45,1511.9,12,WAITING,,,,,
-2026-10-23,ANANDRATHI,Anand Rathi Wealth Ltd.,Financial Services,81.7,2246.5,2171.5,2396.5,2471.5,8,WAITING,,,,,
-2026-10-23,PVRINOX,PVR INOX Ltd.,Media Entertainment & Publication,51.6,1428.4,1354.3,1576.6,1650.7,13,WAITING,,,,,
-2026-10-23,TECHM,Tech Mahindra Ltd.,Information Technology,44.7,1848.7,1767.8,2010.5,2091.4,10,WAITING,,,,,
-2026-10-23,IPCALAB,Ipca Laboratories Ltd.,Healthcare,40.2,1983.8,1879.9,2191.6,2295.5,9,WAITING,,,,,
+signal_date,symbol,name,sector,score,entry,stop,target1,target2,qty,status,entry_date,fill_price,exit_date,exit_price,result_pct,list
+2026-10-23,CYIENT,Cyient Ltd.,Information Technology,92.9,1270.55,1190.1,1431.45,1511.9,12,OPEN,2026-10-26,1270.55,,,,
+2026-10-23,ANANDRATHI,Anand Rathi Wealth Ltd.,Financial Services,81.7,2246.5,2171.5,2396.5,2471.5,8,WAITING,,,,,,
+2026-10-23,PVRINOX,PVR INOX Ltd.,Media Entertainment & Publication,51.6,1428.4,1354.3,1576.6,1650.7,13,WAITING,,,,,,
+2026-10-23,TECHM,Tech Mahindra Ltd.,Information Technology,44.7,1848.7,1767.8,2010.5,2091.4,10,WAITING,,,,,,
+2026-10-23,IPCALAB,Ipca Laboratories Ltd.,Healthcare,40.2,1983.8,1879.9,2191.6,2295.5,9,OPEN,2026-10-26,1983.8,,,,
+2026-10-26,INDHOTEL,Indian Hotels Co. Ltd.,Consumer Services,62.8,797.25,764.55,862.65,895.35,6,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-10-26,KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,61.8,447.2,432.2,477.2,492.2,11,WAITING,,,,,,Top 5 at any price (Nifty 500)
