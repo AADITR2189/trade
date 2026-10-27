@@ -2,7 +2,9 @@
   "offset": 982493562,
   "stocks": {
     "INDHOTEL": {
-      "fired": [],
+      "fired": [
+        "entry"
+      ],
       "last_alert_price": 807.8,
       "levels": {
         "entry": 797.0,
