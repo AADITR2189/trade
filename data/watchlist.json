@@ -1,6 +1,17 @@
 {
-  "offset": 982493560,
+  "offset": 982493561,
   "stocks": {
+    "INDHOTEL": {
+      "fired": [],
+      "last_alert_price": 807.8,
+      "levels": {
+        "entry": 797.0,
+        "stop": 767.0,
+        "target1": 862.0,
+        "target2": null
+      },
+      "since": "27 Oct 2026"
+    },
     "KOTAKBANK": {
       "fired": [
         "entry"
