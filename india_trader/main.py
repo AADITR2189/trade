@@ -13,10 +13,19 @@ from datetime import time as dtime
 from pathlib import Path
 
 from . import context, data_sources, market_calendar, news, scanner, tracker
+from .gitsave import commit_paths
 from .notify import build_message, send_telegram
 
 ROOT = Path(__file__).resolve().parent.parent
 REPORT = ROOT / "reports" / "latest.md"
+LAST_SCAN = ROOT / "data" / "last_scan.txt"
+
+
+def scanned_today(today) -> bool:
+    try:
+        return LAST_SCAN.read_text().strip() == today.isoformat()
+    except OSError:
+        return False
 
 
 def load_config() -> dict:
@@ -57,6 +66,9 @@ def main(argv=None) -> int:
         note = f"NSE holiday list for {today.year} is not loaded yet; weekdays are assumed open."
     if not args.force and not args.demo and not market_calendar.is_trading_day(today):
         print(f"{today} is not an NSE trading day. Nothing to do.")
+        return 0
+    if not args.force and not args.dry_run and scanned_today(today):
+        print(f"The morning message for {today} was already sent.")
         return 0
 
     if not args.demo and data_sources.refresh_universe():
@@ -147,6 +159,8 @@ def main(argv=None) -> int:
     REPORT.write_text(html.unescape(text).replace("<b>", "**").replace("</b>", "**")
                       .replace("<i>", "_").replace("</i>", "_") + "\n")
     send_telegram(text)
+    LAST_SCAN.write_text(today.isoformat() + "\n")
+    commit_paths([ROOT / "data", REPORT.parent], f"Daily scan {today}")
     return 0
 
 

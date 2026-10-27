@@ -22,7 +22,6 @@ import argparse
 import json
 import os
 import re
-import subprocess
 import sys
 import time
 from datetime import datetime, time as dtime
@@ -32,6 +31,7 @@ import pandas as pd
 import requests
 
 from . import data_sources, market_calendar, tracker
+from .gitsave import commit_paths
 from .notify import _inr, get_updates, send_telegram
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -72,15 +72,7 @@ def save_state(state: dict, path: Path | None = None) -> None:
 
 def commit_state(message: str) -> None:
     """On GitHub, save the watchlist into the repository so the next run remembers it."""
-    if not os.environ.get("GITHUB_ACTIONS"):
-        return
-    cmds = [["git", "add", str(STATE_FILE)], ["git", "commit", "-q", "-m", message],
-            ["git", "pull", "-q", "--rebase"], ["git", "push", "-q"]]
-    for cmd in cmds:
-        r = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
-        if r.returncode != 0 and cmd[1] != "commit":
-            print(f"git {cmd[1]} failed: {r.stderr.strip()[:300]}")
-            return
+    commit_paths([STATE_FILE], message)
 
 
 # --- prices ------------------------------------------------------------------------

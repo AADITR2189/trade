@@ -1,10 +1,7 @@
-name: Daily NSE scan
+name: Daily NSE scan (manual)
 
+# The automatic morning run is done by tick.yml; use this one for tests and re-runs.
 on:
-  schedule:
-    # 02:15 UTC = 7:45 AM India time, Monday to Friday. GitHub can start it up to
-    # ~30 minutes late, which still lands before the 9:15 AM market open.
-    - cron: "15 2 * * 1-5"
   workflow_dispatch:
     inputs:
       dry_run:

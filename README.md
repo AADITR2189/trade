@@ -1,6 +1,6 @@
 # Trade Helper: NSE swing-trade scanner
 
-Every trading morning at about **7:45 AM India time**, this app:
+Every trading morning from about **7:45 AM India time** (usually by 8:15), this app:
 
 1. Downloads the latest daily prices for the **Nifty 500** stocks.
 2. Checks how the market is doing (Nifty 50 trend: Bullish / Neutral / Bearish).
@@ -43,8 +43,8 @@ While the market is open the bot checks prices **every minute** and messages you
 the buy price after Target 1, or 📈📉 moves 2% since the last update (`move_alert_pct`). After 3:30 PM
 you get one closing line per watched stock.
 
-The bot answers within seconds during market hours (9:05 AM – 3:45 PM on trading days) and within
-30 minutes at other times. Prices come from Yahoo Finance and can lag the exchange by a few minutes:
+The bot answers within seconds during market hours (about 9:05 AM – 3:45 PM on trading days) and
+within about 15 minutes at other times. Prices come from Yahoo Finance and can lag the exchange by a few minutes:
 confirm in Kite before acting. Only your Telegram chat can control the bot.
 
 ---
@@ -69,13 +69,23 @@ confirm in Kite before acting. Only your Telegram chat can control the bot.
 Never paste the token in a chat, an email, or a file in the repository.
 
 ### 4. Test it
-1. Open the **Actions** tab → **Daily NSE scan** → **Run workflow**.
+1. Open the **Actions** tab → **Daily NSE scan (manual)** → **Run workflow**, and tick **Send a TEST message**.
 2. Tick **Run even if NSE is closed today** if it's a weekend or holiday, and press **Run workflow**.
 3. After 3–5 minutes the message should arrive on Telegram.
 
 From then on it runs by itself every trading morning (weekends and NSE holidays are skipped).
 
 ---
+
+## How it runs
+
+One GitHub workflow, **Trade helper** (`.github/workflows/tick.yml`), starts every 15 minutes and does
+whatever is due: the morning scan (once per trading day, from 7:40 AM), keeping the bot online during
+market hours, or answering your commands. GitHub sometimes starts scheduled runs late or skips them;
+because every run catches up, a skipped one only delays things by about 15 minutes.
+
+- **Check Telegram** workflow: confirms the bot, your chat, and sends a test message.
+- **Daily NSE scan (manual)**: test or re-run the morning message.
 
 ## Changing the rules: `config.json`
 

@@ -1,0 +1,40 @@
+name: Trade helper
+
+# One heartbeat every 15 minutes; india_trader/tick.py decides what is due (morning scan,
+# keeping the Telegram bot online in market hours, or answering commands). GitHub may start
+# runs late or skip some; each run catches up, so a missed one costs at most a few minutes.
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trade-bot
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Do whatever is due
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          git config user.name "trade-helper-bot"
+          git config user.email "trade-helper-bot@users.noreply.github.com"
+          python -m india_trader.tick
