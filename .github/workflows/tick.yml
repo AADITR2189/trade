@@ -11,6 +11,9 @@ on:
 permissions:
   contents: write
 
+env:
+  PYTHONUNBUFFERED: "1"   # show progress in the log as it happens
+
 concurrency:
   group: trade-bot
   cancel-in-progress: false

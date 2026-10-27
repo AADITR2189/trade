@@ -20,6 +20,9 @@ on:
 permissions:
   contents: write
 
+env:
+  PYTHONUNBUFFERED: "1"   # show progress in the log as it happens
+
 concurrency:
   # Test runs (dry run) save nothing, so they don't need to wait for the bot.
   group: ${{ (inputs.dry_run || inputs.test_send) && 'dry-run' || 'trade-bot' }}
