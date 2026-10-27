@@ -13,7 +13,7 @@ While watching, you get a message when the price
   - crosses the buy price, hits the stop-loss, Target 1, Target 2, or falls back to the buy
     price after Target 1 (only when there are levels), and
   - moves move_alert_pct (default 2%) up or down since the last message about that stock,
-a price update every 15 minutes (update_every_minutes, 0 = off) from 9:30 AM to 3:15 PM,
+a price update every 30 minutes (update_every_minutes, 0 = off) from 9:30 AM to 3:15 PM,
 plus a closing line for each watched stock after 3:30 PM. Watching lasts until you send stop.
 
     python -m india_trader.bot --once           # answer waiting messages, check prices once
@@ -302,7 +302,7 @@ def main(argv=None) -> int:
         hh, mm = map(int, args.until.split(":"))
         end = dtime(hh, mm)
     last_check = 0.0
-    every = cfg.get("update_every_minutes", 15)
+    every = cfg.get("update_every_minutes", 30)
     last_slot = update_slot(market_calendar.now_ist(), every)  # first update at the next slot
     print(f"Bot online at {market_calendar.now_ist():%H:%M} IST, watching {sorted(state['stocks'])}")
 
