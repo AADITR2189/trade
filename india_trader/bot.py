@@ -49,7 +49,7 @@ HELP = (
     "<code>watch it</code>: current price of all your watched stocks\n"
     "<code>price IRFC</code>: current price of any NSE stock\n\n"
     "You'll get a message when a watched stock crosses its buy price, stop-loss or targets, "
-    "or moves {pct}% since the last update, a price update every 15 minutes, "
+    "or moves {pct}% since the last update, a price update every {every} minutes, "
     "and a closing line after 3:30 PM."
 )
 
@@ -167,7 +167,7 @@ def handle(text: str, state: dict, cfg: dict, now: datetime, picks: pd.DataFrame
     cmd, a = parse(text)
     stocks = state["stocks"]
     if cmd == "help":
-        return HELP.format(pct=cfg["move_alert_pct"])
+        return HELP.format(pct=cfg["move_alert_pct"], every=cfg.get("update_every_minutes", 30))
     if cmd == "watch":
         if not stocks:
             return "You're not watching any stock. Send e.g. <code>IRFC start</code>."
