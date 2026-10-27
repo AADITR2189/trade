@@ -1,5 +1,19 @@
 {
-  "offset": 982493553,
-  "stocks": {},
+  "offset": 982493554,
+  "stocks": {
+    "KOTAKBANK": {
+      "fired": [
+        "entry"
+      ],
+      "last_alert_price": 443.3,
+      "levels": {
+        "entry": 440.0,
+        "stop": 432.0,
+        "target1": 480.0,
+        "target2": null
+      },
+      "since": "27 Oct 2026"
+    }
+  },
   "summary_date": null
 }
