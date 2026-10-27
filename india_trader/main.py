@@ -38,9 +38,13 @@ def drop_unfinished_candle(prices: dict, now) -> None:
     if now.time() >= dtime(15, 45):
         return
     today = now.date()
-    for sym, df in prices.items():
+    for sym, df in list(prices.items()):
         if len(df) and df.index[-1] == today:
-            prices[sym] = df.iloc[:-1]
+            df = df.iloc[:-1]
+        if len(df):
+            prices[sym] = df
+        else:
+            del prices[sym]  # e.g. listed today: no finished day yet
 
 
 def main(argv=None) -> int:

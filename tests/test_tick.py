@@ -25,3 +25,18 @@ def test_bot_online_in_market_hours_with_6_hour_cap():
 def test_weekends_and_holidays_only_answer_commands():
     assert plan(at(31, 10, 7), scanned=False) == (False, None)      # Saturday
     assert plan(datetime(2026, 11, 10, 10, 7, tzinfo=IST), scanned=False) == (False, None)  # Diwali
+
+
+def test_failed_scan_alerts_once_and_keeps_session_short(monkeypatch, tmp_path):
+    from india_trader import tick
+    sent, bot_args = [], []
+    monkeypatch.setattr(tick, "SCAN_ALERT", tmp_path / "alert.txt")
+    monkeypatch.setattr(tick.market_calendar, "now_ist", lambda: at(27, 9, 37))
+    monkeypatch.setattr(tick.morning, "scanned_today", lambda d: False)
+    monkeypatch.setattr(tick.morning, "main", lambda argv: 1 / 0)
+    monkeypatch.setattr(tick, "send_telegram", lambda m: sent.append(m))
+    monkeypatch.setattr(tick.bot, "main", lambda argv: bot_args.append(argv) or 0)
+    tick.run()
+    tick.run()
+    assert len(sent) == 1 and "failed" in sent[0]
+    assert bot_args == [["--until", "09:51"], ["--until", "09:51"]]

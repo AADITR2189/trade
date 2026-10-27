@@ -11,13 +11,17 @@ started at an exact time; each tick catches up:
     python -m india_trader.tick
 """
 import sys
+import traceback
 from datetime import datetime, time as dtime, timedelta
 
 from . import bot, main as morning, market_calendar
+from .gitsave import commit_paths
+from .notify import send_telegram
 
 SCAN_FROM, SCAN_UNTIL = dtime(7, 40), dtime(15, 30)
 BOT_FROM, BOT_UNTIL = dtime(9, 0), dtime(15, 45)
 MAX_SESSION = timedelta(hours=5, minutes=30)
+SCAN_ALERT = morning.ROOT / "data" / "scan_alert.txt"
 
 
 def plan(now: datetime, scanned: bool) -> tuple[bool, str | None]:
@@ -39,11 +43,29 @@ def run() -> int:
     if scan:
         try:
             morning.main([])
-        except Exception as exc:  # keep the bot running even if the scan fails
-            print(f"Morning scan failed: {exc!r}")
+        except Exception as exc:  # tell the user once a day, then keep the bot running
+            traceback.print_exc()
+            today = now.date().isoformat()
+            if _read(SCAN_ALERT) != today:
+                send_telegram(f"⚠️ Today's morning scan failed ({type(exc).__name__}: {exc}). "
+                              "I'll keep retrying every 15 minutes. Live updates still work.")
+                SCAN_ALERT.write_text(today + "\n")
+                commit_paths([SCAN_ALERT], f"Morning scan failed {today}")
     # The scan takes a few minutes; re-check the clock before choosing the bot mode.
-    _, until = plan(market_calendar.now_ist(), True)
+    later = market_calendar.now_ist()
+    retry = scan and not morning.scanned_today(later.date())
+    _, until = plan(later, True)
+    if until and retry:
+        # Keep this session short so the next tick can retry the scan.
+        until = min(until, (later + timedelta(minutes=14)).strftime("%H:%M"))
     return bot.main(["--until", until] if until else ["--once"])
+
+
+def _read(path) -> str:
+    try:
+        return path.read_text().strip()
+    except OSError:
+        return ""
 
 
 if __name__ == "__main__":

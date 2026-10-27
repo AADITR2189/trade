@@ -136,3 +136,14 @@ def test_small_capital_sizing_explains_zero_shares():
     assert p["qty"] == int(min(100 // risk, 5000 // p["entry"]))
     tiny = scanner.evaluate(df, {**CFG, "capital_inr": 500, "risk_per_trade_pct": 1, "max_position_pct": 50})
     assert tiny["qty"] == 0 and "limit" in tiny["qty_note"]
+
+
+def test_stock_listed_today_is_dropped_not_crashing():
+    from datetime import datetime
+    from india_trader.main import drop_unfinished_candle
+    from india_trader.market_calendar import IST
+    today = date(2026, 10, 27)
+    prices = {"NEW": candles([[10, 11, 9, 10]], start=today),
+              "OLD": candles([[10, 11, 9, 10], [10, 11, 9, 10]], start=date(2026, 10, 26))}
+    drop_unfinished_candle(prices, datetime(2026, 10, 27, 9, 30, tzinfo=IST))
+    assert list(prices) == ["OLD"] and len(prices["OLD"]) == 1
