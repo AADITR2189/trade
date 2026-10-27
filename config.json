@@ -35,5 +35,6 @@
   "news_penalty": 15,
 
   "move_alert_pct": 2,
+  "update_every_minutes": 15,
   "price_check_seconds": 60
 }

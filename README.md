@@ -40,7 +40,8 @@ Send these to your bot in Telegram (capitals don't matter):
 Watch as many stocks as you like, for as long as you like (days or months) until you send `stop`.
 While the market is open the bot checks prices **every minute** and messages you when a watched stock:
 🟢 crosses the buy price, 🛑 hits the stop-loss, 🎯 reaches Target 1, 🏆 Target 2, ↩️ falls back to
-the buy price after Target 1, or 📈📉 moves 2% since the last update (`move_alert_pct`). After 3:30 PM
+the buy price after Target 1, or 📈📉 moves 2% since the last update (`move_alert_pct`), plus a ⏱ price update every 15 minutes
+(9:30 AM – 3:15 PM, `update_every_minutes`). After 3:30 PM
 you get one closing line per watched stock.
 
 The bot answers within seconds during market hours (about 9:05 AM – 3:45 PM on trading days) and
@@ -107,6 +108,7 @@ because every run catches up, a skipped one only delays things by about 15 minut
 | `stop_atr_multiple` | stop-loss distance, in average daily ranges (ATR) | 1.5 |
 | `target1_r` / `target2_r` | targets as multiples of the risk | 2 / 3 |
 | `move_alert_pct` | live update when a watched stock moves this % | 2 |
+| `update_every_minutes` | regular price update for watched stocks in market hours (0 = off) | 15 |
 | `entry_valid_days` | days a pick stays valid if price doesn't cross "Buy above" | 3 |
 | `max_hold_days` | trading days before an open trade is closed | 15 |
 | `skip_new_picks_when_market_bearish` | send no new picks when Nifty is falling | false |

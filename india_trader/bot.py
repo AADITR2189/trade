@@ -13,6 +13,7 @@ While watching, you get a message when the price
   - crosses the buy price, hits the stop-loss, Target 1, Target 2, or falls back to the buy
     price after Target 1 (only when there are levels), and
   - moves move_alert_pct (default 2%) up or down since the last message about that stock,
+a price update every 15 minutes (update_every_minutes, 0 = off) from 9:30 AM to 3:15 PM,
 plus a closing line for each watched stock after 3:30 PM. Watching lasts until you send stop.
 
     python -m india_trader.bot --once           # answer waiting messages, check prices once
@@ -48,7 +49,8 @@ HELP = (
     "<code>watch it</code>: current price of all your watched stocks\n"
     "<code>price IRFC</code>: current price of any NSE stock\n\n"
     "You'll get a message when a watched stock crosses its buy price, stop-loss or targets, "
-    "or moves {pct}% since the last update, plus a closing line after 3:30 PM."
+    "or moves {pct}% since the last update, a price update every 15 minutes, "
+    "and a closing line after 3:30 PM."
 )
 
 
@@ -260,6 +262,23 @@ def check_prices(state: dict, cfg: dict, now: datetime) -> list[str]:
     return msgs
 
 
+def update_slot(now: datetime, every: int) -> str | None:
+    """The current 'every N minutes' slot (e.g. '11:15'), or None outside 9:30 AM - 3:15 PM."""
+    if not every or not market_open(now):
+        return None
+    minutes = (now.hour * 60 + now.minute) // every * every
+    slot = dtime(minutes // 60, minutes % 60)
+    if not (dtime(9, 30) <= slot < MARKET_CLOSE):
+        return None
+    return slot.strftime("%H:%M")
+
+
+def regular_update(state: dict, now: datetime, slot: str) -> str:
+    lines = [f"<b>⏱ {slot} update</b>"]
+    lines += [price_line(s, quote(s), w, now) for s, w in sorted(state["stocks"].items())]
+    return "\n\n".join(lines)
+
+
 def closing_summary(state: dict, now: datetime) -> str:
     lines = ["<b>📊 Market closed: your watched stocks</b>"]
     lines += [price_line(s, quote(s), w, now) for s, w in sorted(state["stocks"].items())]
@@ -283,6 +302,8 @@ def main(argv=None) -> int:
         hh, mm = map(int, args.until.split(":"))
         end = dtime(hh, mm)
     last_check = 0.0
+    every = cfg.get("update_every_minutes", 15)
+    last_slot = update_slot(market_calendar.now_ist(), every)  # first update at the next slot
     print(f"Bot online at {market_calendar.now_ist():%H:%M} IST, watching {sorted(state['stocks'])}")
 
     while True:
@@ -313,6 +334,12 @@ def main(argv=None) -> int:
             if alerts:
                 out += alerts
                 changed = True
+
+        slot = update_slot(now, every)
+        if state["stocks"] and slot and slot != last_slot:
+            out.append(regular_update(state, now, slot))
+        if slot:
+            last_slot = slot
 
         today = now.date().isoformat()
         if (state["stocks"] and market_calendar.is_trading_day(now.date())

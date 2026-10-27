@@ -117,3 +117,22 @@ def test_only_owner_can_command(monkeypatch, tmp_path, prices):
     assert bot.main(["--once"]) == 0
     saved = bot.load_state(tmp_path / "w.json")
     assert list(saved["stocks"]) == ["CYIENT"] and saved["offset"] == 7 and len(sent) == 1
+
+
+def test_update_slots_every_15_minutes():
+    def t(h, m):
+        return datetime(2026, 10, 27, h, m, tzinfo=IST)
+    assert bot.update_slot(t(9, 20), 15) is None            # first update at 9:30
+    assert bot.update_slot(t(9, 31), 15) == "09:30"
+    assert bot.update_slot(t(11, 14), 15) == "11:00"
+    assert bot.update_slot(t(15, 16), 15) == "15:15"
+    assert bot.update_slot(t(15, 31), 15) is None           # closing summary instead
+    assert bot.update_slot(t(11, 14), 0) is None             # switched off
+    assert bot.update_slot(datetime(2026, 10, 31, 11, 0, tzinfo=IST), 15) is None  # Saturday
+
+
+def test_regular_update_lists_watched_stocks(prices):
+    s = state()
+    bot.handle("IRFC start", s, CFG, NOW, picks())
+    text = bot.regular_update(s, NOW, "11:00")
+    assert "⏱ 11:00 update" in text and "IRFC" in text and "₹138.00" in text
