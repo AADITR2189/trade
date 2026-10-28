@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # lets a market-day session start the next one
 
 env:
   PYTHONUNBUFFERED: "1"   # show progress in the log as it happens
@@ -41,3 +42,14 @@ jobs:
           git config user.name "trade-helper-bot"
           git config user.email "trade-helper-bot@users.noreply.github.com"
           python -m india_trader.tick
+
+      - name: Start the next session
+        # GitHub's scheduler can go hours without starting a run, so a market-day session that
+        # reached its time limit before 3:45 PM starts the next one itself (tick.py decides).
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f .next_tick ]; then
+            gh workflow run tick.yml --ref "$GITHUB_REF_NAME"
+          fi

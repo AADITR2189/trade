@@ -3,9 +3,10 @@
 GitHub's scheduler often starts runs late or skips them, so nothing here depends on being
 started at an exact time; each tick catches up:
   1. Trading day, after 7:40 AM, morning message not sent yet -> run the morning scan.
-  2. Trading day, 9:00 AM - 3:45 PM -> keep the Telegram bot online (live prices every minute)
-     until 3:45 PM, or for at most 5.5 hours (GitHub stops a job after 6); the next tick
-     takes over.
+  2. Trading day, 7:40 AM - 3:45 PM -> keep the Telegram bot online (live prices every minute
+     once the market opens) until 3:45 PM, or for at most 5.5 hours (GitHub stops a job after
+     6); the workflow then starts the next tick itself (see tick.yml), so one tick in the
+     morning keeps the bot online all day.
   3. Any other time -> answer waiting Telegram commands once.
 
     python -m india_trader.tick
@@ -19,9 +20,10 @@ from .gitsave import commit_paths
 from .notify import send_telegram
 
 SCAN_FROM, SCAN_UNTIL = dtime(7, 40), dtime(15, 30)
-BOT_FROM, BOT_UNTIL = dtime(9, 0), dtime(15, 45)
+BOT_FROM, BOT_UNTIL = dtime(7, 40), dtime(15, 45)
 MAX_SESSION = timedelta(hours=5, minutes=30)
 SCAN_ALERT = morning.ROOT / "data" / "scan_alert.txt"
+NEXT_FLAG = morning.ROOT / ".next_tick"  # tells tick.yml to start the next session
 
 
 def plan(now: datetime, scanned: bool) -> tuple[bool, str | None]:
@@ -58,7 +60,12 @@ def run() -> int:
     if until and retry:
         # Keep this session short so the next tick can retry the scan.
         until = min(until, (later + timedelta(minutes=14)).strftime("%H:%M"))
-    return bot.main(["--until", until] if until else ["--once"])
+    code = bot.main(["--until", until] if until else ["--once"])
+    # Hand over to a new session only when this one ran to its end before 3:45 PM.
+    if code == 0 and until and until < BOT_UNTIL.strftime("%H:%M") \
+            and market_calendar.now_ist().strftime("%H:%M") >= until:
+        NEXT_FLAG.write_text(until + "\n")
+    return code
 
 
 def _read(path) -> str:
