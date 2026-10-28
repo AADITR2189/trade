@@ -1,47 +1,65 @@
-**📈 NSE swing setups for Tue 27 Oct 2026**
-Prices up to the close of 2026-10-26
-Market: 🔴 **Bearish**. Nifty 50 22,753 (+0.68%), RSI 46
-India VIX: 17.2 (+1.8%), normal
-Cash market flows 26 Oct: FII −₹1,462 Cr · DII +₹2,610 Cr
+**📈 NSE swing setups for Wed 28 Oct 2026**
+Prices up to the close of 2026-10-27
+Market: 🔴 **Bearish**. Nifty 50 22,750 (-0.02%), RSI 46
+India VIX: 16.4 (-4.4%), normal
+Cash market flows 27 Oct: FII +₹4,240 Cr · DII −₹1,250 Cr
 _Market is weak: breakouts fail more often. Consider skipping or using smaller sizes._
 
 **Updates on earlier picks**
-🟢 CYIENT: entry triggered at ₹1,270.55 (2026-10-26)
-🟢 IPCALAB: entry triggered at ₹1,983.80 (2026-10-26)
-📅 PVRINOX: Financial Results/Other business matters on 28 Oct (entry still pending). Prices can jump either way on results day; consider booking profit or skipping entry.
+🛑 CYIENT: stop-loss hit at ₹1,190.10 (-6.33%)
+🟢 ANANDRATHI: entry triggered at ₹2,246.50 (2026-10-27)
+🟢 PVRINOX: entry triggered at ₹1,428.40 (2026-10-27)
+🟢 INDHOTEL: entry triggered at ₹797.25 (2026-10-27)
 
 _Sizes for capital ₹10,000, risk 2.0% per trade._
 
 **━━ Top 5 at any price (Nifty 500) ━━**
 
-**1. INDHOTEL** · Indian Hotels Co. Ltd. · score 63/100
-   Buy above: **₹797.25** (last close ₹795.50)
-   Stop-loss: **₹764.55** (−4.1%)
-   Target 1: ₹862.65 · Target 2: ₹895.35
-   Size: 6 shares ≈ ₹4,784, max loss ≈ ₹196
-   Why: closed at a 20-day high, volume 1.1x average, RSI 68, ADX 21
-   📰 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5ZN3I0ci1oWlpNd2lRaUxyeG5yVkYxWTFaV3QybTVwZmlwWDhRRW04dGp5QTVTbWxiSTE0MzROTkkyUzg0TFExS0FWcWJ4Y2tYZ2ZQMTRkUm1fVWJmczNuU1BhWm4zV25TbF9FNzdFcGhjTjVIWW1kcA?oc=5">Indian Hotels Co Ltd Rights 2021-08.12.21 For Shares Estimates – BSE:IHCL_RE</a> (TradingView, 26 Oct)
+**1. APLAPOLLO** · APL Apollo Tubes Ltd. · score 82/100 (news +5)
+   Buy above: **₹2,218.35** (last close ₹2,213.90)
+   Stop-loss: **₹2,119.15** (−4.5%)
+   Target 1: ₹2,416.75 · Target 2: ₹2,515.95
+   Size: 2 shares ≈ ₹4,437, max loss ≈ ₹198
+   Why: 0.5% below its 20-day high, volume 3.8x average, RSI 58, ADX 24
+   ✅ <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxQRnlEYkFTWDN5b1VVV2E4RllCMjMxZjZObTVoNlI4YzFELUJqYjRKZ3hRTDhjUkZveWNzTzhvV01xRFlYMExVOEpSMEFfWVNwRERGcTlSeXFFcjVGcG5JellLNWpISHRlRUtTZFJEMFJrblpMVlJjaXlqbW5Xb1lnb1hIUDRaR3JpMjhHY3lVb29SaThwNmZCMFhWUlhqUFc4ZmVoOGstVVhROElmaUhwSXFvNU1iN2lwUzlwWHVMY0UzNVVJRTZrT01uMDMxdkhoSXNZ?oc=5">APL Apollo Tubes Ltd Reports Strong Quarterly Growth, Upgrades Financial Outlook</a> (MarketsMojo, 27 Oct)
+   📰 <a href="https://nsearchives.nseindia.com/corporate/APLAPOLLO_26102026125000_Investor_Presentation.pdf">Investor Presentation: APL Apollo Tubes Limited has informed the Exchange about Investor Presentation</a> (NSE filing, 26 Oct)
 
-**2. KOTAKBANK** · Kotak Mahindra Bank Ltd. · score 62/100 (news +5)
-   Buy above: **₹447.20** (last close ₹440.75)
-   Stop-loss: **₹432.20** (−3.4%)
-   Target 1: ₹477.20 · Target 2: ₹492.20
-   Size: 11 shares ≈ ₹4,919, max loss ≈ ₹165
-   Why: 2.7% below its 20-day high, volume 1.2x average, RSI 59, ADX 36
-   ✅ <a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxOZ255Mk5iVk1ST3ZETDQzMVlsTWpzc1pkTnVzR0JTUnNTcGRRZ1BKUEdrNHQxTWQzdnZnU3hRY0YwNVZIa2xVQ3hxWnJtdWswLUljZWdrdzI1WVZXdVBiZTVvZlpkYXZwVHJ1MVZUTmxXMlV3elFheHRSVjQyczJ2d0RfWW1PcmFoLXNjYnhldnJZMTA0Q3l5UzQzc2w5amtKTXhfblA0dnBVc1B1OGxMU0N0UzktUGFZRlVUWXp4YWtYYTNLU0sxVGRtNzcyc04xQ2hwTC1zQWpvNEFld2J1MXgtNmZFdjE4NVVTbA?oc=5">Kotak Mahindra Bank Limited Stock 12‑Month Price Target Raised to INR 497.07, Implies 15% Upside</a> (TradingView, 26 Oct)
-   📰 <a href="https://nsearchives.nseindia.com/corporate/KMBLTAB_24102026133347_InvestorPresentationOct242026SIGNED.pdf">Investor Presentation: Kotak Mahindra Bank Limited has informed the Exchange about Investor Presentation</a> (NSE filing, 24 Oct)
+**2. MRPL** · Mangalore Refinery & Petrochemicals Ltd. · score 65/100
+   Buy above: **₹190.70** (last close ₹189.44)
+   Stop-loss: **₹176.60** (−7.4%)
+   Target 1: ₹218.90 · Target 2: ₹233.00
+   Size: 14 shares ≈ ₹2,670, max loss ≈ ₹197
+   Why: 1.1% below its 20-day high, volume 1.7x average, RSI 62, ADX 29
 
-_Skipped because results/board meeting are too close: ADANIPORTS (Financial Results on 28 Oct)_
+_Skipped because results/board meeting are too close: SUNTV (Financial Results/Dividend on 30 Oct)_
 
 _Only 2 stock(s) scored 60+ for this list today._
 
 **━━ Top 10 with buy price up to ₹500 (all NSE stocks) ━━**
-No stock passed all the rules with a score of 60+ today. No trade is also a decision.
+
+**1. ORIENTHOT** · Oriental Hotels Limited · score 73/100
+   Buy above: **₹159.35** (last close ₹157.93)
+   Stop-loss: **₹151.50** (−4.9%)
+   Target 1: ₹175.05 · Target 2: ₹182.90
+   Size: 25 shares ≈ ₹3,984, max loss ≈ ₹196
+   Why: closed at a 20-day high, volume 1.2x average, RSI 68, ADX 27
+   📰 <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTFBaVEZ1T0xtMGVUeF9PVGZqMDNMcHJ3UFVUQW9KbkdTczJJM2pGaTF0alFBYzRKMjUtMWRGaVJwb3MxY3lPR0ZEYkg3RGJCQ0tpdXE1VWZ5d0x2SDFOeG9rUHp6dGVlZldlbXVwSERvNC02QkR6dGd6ZHJ3?oc=5">IHCL and Oriental Hotels Announce Merger Deal</a> (https://safariindia.com/, 26 Oct)
+
+**2. NAZARA** · Nazara Technologies Limited · score 72/100
+   Buy above: **₹408.60** (last close ₹401.30)
+   Stop-loss: **₹385.80** (−5.6%)
+   Target 1: ₹454.20 · Target 2: ₹477.00
+   Size: 8 shares ≈ ₹3,269, max loss ≈ ₹182
+   Why: 4.4% below its 20-day high, volume 2.0x average, RSI 58, ADX 30
+   📰 <a href="https://nsearchives.nseindia.com/corporate/NAZARA_26102026194240_InvestorpresentationF.pdf">Updates: Nazara Technologies Limited informs the Exchange regarding Investor Presentation.</a> (NSE filing, 26 Oct)
+   📰 <a href="https://nsearchives.nseindia.com/corporate/NAZARA_26102026193838_PRIntimationF.pdf">Press Release: Nazara Technologies Limited informs the Exchange regarding a press release dated October 26, 2026, titled Nazara reports record Q2FY27:…</a> (NSE filing, 26 Oct)
+
+_Only 2 stock(s) scored 60+ for this list today._
 
 _Rules: buy only if the price trades above 'Buy above' within 3 trading days. Exit at the stop-loss, no exceptions. At Target 1 book half and move the stop to your buy price._
 
-👉 For live updates on a stock, reply e.g. <code>INDHOTEL start</code>. Send <code>help</code> for all commands.
+👉 For live updates on a stock, reply e.g. <code>APLAPOLLO start</code>. Send <code>help</code> for all commands.
 
-**Track record**: no closed trades yet (2 in trade, 5 waiting for entry). Paper-trade for 3–4 weeks before using real money.
+**Track record**: 1 closed trades, 0 wins, 1 losses, win rate 0.0%, average -6.33% per trade. 4 in trade, 6 waiting for entry.
 
 ⚠️ Computer-generated signals from price rules, for learning and paper trading. Not investment advice. Past patterns do not guarantee future moves.
