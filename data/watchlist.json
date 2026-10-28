@@ -3,7 +3,7 @@
   "stocks": {
     "APLAPOLLO": {
       "fired": [],
-      "last_alert_price": 2213.9,
+      "last_alert_price": 2169.5,
       "levels": {
         "entry": 2218.0,
         "stop": 2200.0,
