@@ -2,8 +2,10 @@
   "offset": 982493568,
   "stocks": {
     "APLAPOLLO": {
-      "fired": [],
-      "last_alert_price": 2214.4,
+      "fired": [
+        "entry"
+      ],
+      "last_alert_price": 2222.8,
       "levels": {
         "entry": 2218.0,
         "stop": 2200.0,
