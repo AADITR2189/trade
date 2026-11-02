@@ -5,8 +5,14 @@ signal_date,symbol,name,sector,score,entry,stop,target1,target2,qty,status,entry
 2026-10-23,TECHM,Tech Mahindra Ltd.,Information Technology,44.7,1848.7,1767.8,2010.5,2091.4,10,EXPIRED,,,2026-10-28,,,
 2026-10-23,IPCALAB,Ipca Laboratories Ltd.,Healthcare,40.2,1983.8,1879.9,2191.6,2295.5,9,OPEN,2026-10-26,1983.8,,,,
 2026-10-26,INDHOTEL,Indian Hotels Co. Ltd.,Consumer Services,62.8,797.25,764.55,862.65,895.35,6,OPEN,2026-10-27,797.25,,,,Top 5 at any price (Nifty 500)
-2026-10-26,KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,61.8,447.2,432.2,477.2,492.2,11,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-10-26,KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,61.8,447.2,432.2,477.2,492.2,11,OPEN,2026-10-29,447.2,,,,Top 5 at any price (Nifty 500)
 2026-10-27,APLAPOLLO,APL Apollo Tubes Ltd.,Capital Goods,82.2,2218.35,2119.15,2416.75,2515.95,2,OPEN,2026-10-28,2219.0,,,,Top 5 at any price (Nifty 500)
 2026-10-27,MRPL,Mangalore Refinery & Petrochemicals Ltd.,Oil Gas & Consumable Fuels,64.7,190.7,176.6,218.9,233.0,14,SL_HIT,2026-10-28,190.7,2026-10-28,176.6,-7.39,Top 5 at any price (Nifty 500)
 2026-10-27,ORIENTHOT,Oriental Hotels Limited,,73.0,159.35,151.5,175.05,182.9,25,OPEN,2026-10-28,159.35,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
-2026-10-27,NAZARA,Nazara Technologies Limited,Media Entertainment & Publication,72.0,408.6,385.8,454.2,477.0,8,WAITING,,,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
+2026-10-27,NAZARA,Nazara Technologies Limited,Media Entertainment & Publication,72.0,408.6,385.8,454.2,477.0,8,OPEN,2026-10-29,408.6,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
+2026-10-30,ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,Services,70.4,1875.35,1798.65,2028.75,2105.45,2,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-10-30,SONACOMS,Sona BLW Precision Forgings Ltd.,Automobile and Auto Components,62.4,900.8,856.75,988.9,1032.95,4,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-10-30,WELSPUNLIV,Welspun Living Ltd.,Textiles,60.0,227.5,211.45,259.6,275.65,12,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-10-30,RATNAVEER,Ratnaveer Precision Engineering Limited,,81.5,366.55,339.1,421.45,448.9,7,WAITING,,,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
+2026-10-30,IIFLCAPS,IIFL Capital Services Limited,Financial Services,62.3,348.7,341.45,363.2,370.45,14,WAITING,,,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
+2026-10-30,SBC,SBC Exports Limited,,60.9,67.4,64.0,74.2,77.6,58,WAITING,,,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
