@@ -1,11 +1,11 @@
 signal_date,symbol,name,sector,score,entry,stop,target1,target2,qty,status,entry_date,fill_price,exit_date,exit_price,result_pct,list
 2026-10-23,CYIENT,Cyient Ltd.,Information Technology,92.9,1270.55,1190.1,1431.45,1511.9,12,SL_HIT,2026-10-26,1270.55,2026-10-27,1190.1,-6.33,
-2026-10-23,ANANDRATHI,Anand Rathi Wealth Ltd.,Financial Services,81.7,2246.5,2171.5,2396.5,2471.5,8,OPEN,2026-10-27,2246.5,,,,
-2026-10-23,PVRINOX,PVR INOX Ltd.,Media Entertainment & Publication,51.6,1428.4,1354.3,1576.6,1650.7,13,T1_HIT,2026-10-27,1428.4,,,,
+2026-10-23,ANANDRATHI,Anand Rathi Wealth Ltd.,Financial Services,81.7,2246.5,2171.5,2396.5,2471.5,8,T1_HIT,2026-10-27,2246.5,,,,
+2026-10-23,PVRINOX,PVR INOX Ltd.,Media Entertainment & Publication,51.6,1428.4,1354.3,1576.6,1650.7,13,T2_HIT,2026-10-27,1428.4,2026-11-12,1650.7,12.97,
 2026-10-23,TECHM,Tech Mahindra Ltd.,Information Technology,44.7,1848.7,1767.8,2010.5,2091.4,10,EXPIRED,,,2026-10-28,,,
-2026-10-23,IPCALAB,Ipca Laboratories Ltd.,Healthcare,40.2,1983.8,1879.9,2191.6,2295.5,9,OPEN,2026-10-26,1983.8,,,,
+2026-10-23,IPCALAB,Ipca Laboratories Ltd.,Healthcare,40.2,1983.8,1879.9,2191.6,2295.5,9,SL_HIT,2026-10-26,1983.8,2026-11-13,1879.9,-5.24,
 2026-10-26,INDHOTEL,Indian Hotels Co. Ltd.,Consumer Services,62.8,797.25,764.55,862.65,895.35,6,T2_HIT,2026-10-27,797.25,2026-11-08,895.35,10.25,Top 5 at any price (Nifty 500)
-2026-10-26,KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,61.8,447.2,432.2,477.2,492.2,11,T1_HIT,2026-10-29,447.2,,,,Top 5 at any price (Nifty 500)
+2026-10-26,KOTAKBANK,Kotak Mahindra Bank Ltd.,Financial Services,61.8,447.2,432.2,477.2,492.2,11,T2_HIT,2026-10-29,447.2,2026-11-12,492.2,8.39,Top 5 at any price (Nifty 500)
 2026-10-27,APLAPOLLO,APL Apollo Tubes Ltd.,Capital Goods,82.2,2218.35,2119.15,2416.75,2515.95,2,OPEN,2026-10-28,2219.0,,,,Top 5 at any price (Nifty 500)
 2026-10-27,MRPL,Mangalore Refinery & Petrochemicals Ltd.,Oil Gas & Consumable Fuels,64.7,190.7,176.6,218.9,233.0,14,SL_HIT,2026-10-28,190.7,2026-10-28,176.6,-7.39,Top 5 at any price (Nifty 500)
 2026-10-27,ORIENTHOT,Oriental Hotels Limited,,73.0,159.35,151.5,175.05,182.9,25,T1_HIT,2026-10-28,159.35,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
@@ -26,12 +26,19 @@ signal_date,symbol,name,sector,score,entry,stop,target1,target2,qty,status,entry
 2026-11-08,AUROPHARMA,Aurobindo Pharma Ltd.,Healthcare,63.5,1819.75,1756.55,1946.15,2009.35,2,OPEN,2026-11-09,1819.75,,,,Top 5 at any price (Nifty 500)
 2026-11-08,ATHERENERG,Ather Energy Ltd.,Automobile and Auto Components,62.8,1862.75,1751.2,2085.85,2197.4,1,OPEN,2026-11-09,1862.75,,,,Top 5 at any price (Nifty 500)
 2026-11-08,MANKIND,Mankind Pharma Ltd.,Healthcare,62.7,2598.8,2493.5,2809.4,2914.7,1,OPEN,2026-11-09,2600.0,,,,Top 5 at any price (Nifty 500)
-2026-11-08,NAVINFLUOR,Navin Fluorine International Ltd.,Chemicals,62.7,9263.5,8829.15,10132.2,10566.55,0,OPEN,2026-11-11,9263.5,,,,Top 5 at any price (Nifty 500)
+2026-11-08,NAVINFLUOR,Navin Fluorine International Ltd.,Chemicals,62.7,9263.5,8829.15,10132.2,10566.55,0,T1_HIT,2026-11-11,9263.5,,,,Top 5 at any price (Nifty 500)
 2026-11-08,MCX,Multi Commodity Exchange of India Ltd.,Financial Services,62.5,3612.05,3418.35,3999.45,4193.15,1,OPEN,2026-11-11,3612.05,,,,Top 5 at any price (Nifty 500)
 2026-11-08,SOUTHBANK,The South Indian Bank Limited,Financial Services,71.5,58.8,55.9,64.6,67.5,68,OPEN,2026-11-09,58.8,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
-2026-11-08,TFCILTD,Tourism Finance Corporation of India Limited,,63.9,169.2,160.2,187.2,196.2,22,OPEN,2026-11-09,169.2,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
-2026-11-09,GLAND,Gland Pharma Ltd.,Healthcare,89.7,3380.75,3220.9,3700.45,3860.3,1,WAITING,,,,,,Top 5 at any price (Nifty 500)
-2026-11-09,BOSCHLTD,Bosch Ltd.,Automobile and Auto Components,71.4,51142.1,49093.3,55239.7,57288.5,0,WAITING,,,,,,Top 5 at any price (Nifty 500)
-2026-11-09,PNB,Punjab National Bank,Financial Services,68.4,132.75,127.75,142.75,147.75,37,OPEN,2026-11-11,132.75,,,,Top 5 at any price (Nifty 500)
+2026-11-08,TFCILTD,Tourism Finance Corporation of India Limited,,63.9,169.2,160.2,187.2,196.2,22,SL_HIT,2026-11-09,169.2,2026-11-13,160.2,-5.32,Top 10 with buy price up to ₹500 (all NSE stocks)
+2026-11-09,GLAND,Gland Pharma Ltd.,Healthcare,89.7,3380.75,3220.9,3700.45,3860.3,1,EXPIRED,,,2026-11-13,,,Top 5 at any price (Nifty 500)
+2026-11-09,BOSCHLTD,Bosch Ltd.,Automobile and Auto Components,71.4,51142.1,49093.3,55239.7,57288.5,0,EXPIRED,,,2026-11-13,,,Top 5 at any price (Nifty 500)
+2026-11-09,PNB,Punjab National Bank,Financial Services,68.4,132.75,127.75,142.75,147.75,37,T1_HIT,2026-11-11,132.75,,,,Top 5 at any price (Nifty 500)
 2026-11-09,UNIONBANK,Union Bank of India,Financial Services,63.6,197.45,189.8,212.75,220.4,25,OPEN,2026-11-11,200.44,,,,Top 5 at any price (Nifty 500)
-2026-11-09,RUBICON,Rubicon Research Ltd.,Healthcare,61.8,1781.5,1670.7,2003.1,2113.9,1,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-11-09,RUBICON,Rubicon Research Ltd.,Healthcare,61.8,1781.5,1670.7,2003.1,2113.9,1,EXPIRED,,,2026-11-13,,,Top 5 at any price (Nifty 500)
+2026-11-13,PETRONET,Petronet LNG Ltd.,Oil Gas & Consumable Fuels,71.6,332.7,320.3,357.5,369.9,15,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-11-13,BHARTIARTL,Bharti Airtel Ltd.,Telecommunication,66.0,2127.15,2058.65,2264.15,2332.65,2,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-11-13,NYKAA,FSN E-Commerce Ventures Ltd.,Consumer Services,64.7,367.45,351.25,399.85,416.05,12,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-11-13,MINDACORP,Minda Corporation Ltd.,Automobile and Auto Components,63.4,743.5,702.5,825.5,866.5,4,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-11-13,BAJFINANCE,Bajaj Finance Ltd.,Financial Services,62.1,1120.25,1073.2,1214.35,1261.4,4,WAITING,,,,,,Top 5 at any price (Nifty 500)
+2026-11-13,KRBL,KRBL Limited,Fast Moving Consumer Goods,83.5,443.85,419.0,493.55,518.4,8,WAITING,,,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
+2026-11-13,DELTACORP,Delta Corp Limited,,68.3,88.5,81.25,103.0,110.25,27,WAITING,,,,,,Top 10 with buy price up to ₹500 (all NSE stocks)
