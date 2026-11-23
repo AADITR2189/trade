@@ -1,97 +1,120 @@
-**📈 NSE swing setups for Fri 20 Nov 2026**
-Prices up to the close of 2026-11-19
-Market: 🟢 **Bullish**. Nifty 50 25,514 (+1.14%), RSI 76
-India VIX: 15.6 (+0.3%), normal
+**📈 NSE swing setups for Mon 23 Nov 2026**
+Prices up to the close of 2026-11-20
+Market: 🟢 **Bullish**. Nifty 50 25,801 (+1.12%), RSI 79
+India VIX: 17.3 (+7.5%), normal
 _Not available today: NSE filings, NSE results calendar. News checks are incomplete._
 
 **Updates on earlier picks**
-⌛ APLAPOLLO: time limit reached, closed at ₹2,161.20 (-2.60%)
-⌛ ORIENTHOT: time limit reached, closed at ₹173.96 (+9.51%)
-⚪ PETRONET: never crossed entry ₹332.70, idea cancelled
-⚪ MINDACORP: never crossed entry ₹743.50, idea cancelled
-⚪ KRBL: never crossed entry ₹443.85, idea cancelled
-⚪ DELTACORP: never crossed entry ₹88.50, idea cancelled
-🟢 KPRMILL: entry triggered at ₹1,220.35 (2026-11-17)
-🛑 ETERNAL: stop-loss hit at ₹358.80 (-3.87%)
-⚪ PAYTM: never crossed entry ₹1,960.05, idea cancelled
-🛑 KTKBANK: stop-loss hit at ₹347.20 (-5.05%)
-🟢 HONASA: entry triggered at ₹525.05 (2026-11-18)
+⌛ NAZARA: time limit reached, closed at ₹425.55 (+4.15%)
+🎯 UNIONBANK: Target 1 ₹212.75 reached. Book half, move stop to entry.
+🛑 KARURVYSYA: stop-loss hit at ₹375.75 (-5.23%)
+⚪ ABDL: never crossed entry ₹856.45, idea cancelled
+⚪ ANGELONE: never crossed entry ₹379.95, idea cancelled
+⚪ GROWW: never crossed entry ₹233.90, idea cancelled
+⚪ PRESTIGE: never crossed entry ₹1,707.55, idea cancelled
+🟢 FLUOROCHEM: entry triggered at ₹5,010.00 (2026-11-20)
+🟢 TVSMOTOR: entry triggered at ₹4,610.65 (2026-11-20)
+🟢 EICHERMOT: entry triggered at ₹8,088.65 (2026-11-20)
+🟢 MEESHO: entry triggered at ₹260.55 (2026-11-20)
+🟢 ABCAPITAL: entry triggered at ₹419.45 (2026-11-20)
 
 _Sizes for capital ₹10,000, risk 2.0% per trade._
 
 **━━ Top 5 at any price (Nifty 500) ━━**
 
-**1. SUNTV** · Sun TV Network Ltd. · score 91/100
-   Buy above: **₹715.30** (last close ₹695.60)
-   Stop-loss: **₹671.00** (−6.2%)
-   Target 1: ₹803.90 · Target 2: ₹848.20
-   Size: 4 shares ≈ ₹2,861, max loss ≈ ₹177
-   Why: 1.2% below its 20-day high, volume 2.4x average, RSI 68, ADX 40
-   📰 <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPMk9rTlpGODgtdEU5dDB5RTN5TG13MkJzVGNFaTZBa3RZYi1oY1A3dUpUQW1wUS1nMU51aEExeHQ2ZzFqTTlucTdXQVE3amVnZ1B1YTN1dTFVZ2I3Q2pHdG8tblVvc2IwZ3d4dWxFb08wV3VFMW1TaUlGa1IzZUtyb2hlX3Q2VVpWMXI0ODVuRkQyeUtDblQwNDlvYTVhRXE2dHRlYk9rTW0?oc=5">Sun TV Network Ltd. shares rise 33.63% in six months</a> (Multibagg AI, 19 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQUjlUbW1VdHJzeUxuSFRyaFhHd1Ixd2lJbEZpUmVEVThDTjVtZW5qS1dJaVFJeVpaTGFFaFVWR2xYYnJlWkp6UDB5YzZuMXd3WjVBVE4teTl5R1EyTFRqZHUtRGRwS3hrVEZjejZZd3UtMmlQSnlvSHVCQXBJNTViSkdUZUJEbXVyMkloLXE3XzVDN1F2Q083Q21KRVZzS1BHSEl0UWpiX05TV2ll?oc=5">Broad-Based Technical Strength Lifts Sun TV Network Ltd. to 52-Week High of Rs 704.5</a> (MarketsMojo, 19 Nov)
+**1. POONAWALLA** · Poonawalla Fincorp Ltd. · score 91/100
+   Buy above: **₹523.05** (last close ₹518.40)
+   Stop-loss: **₹495.30** (−5.3%)
+   Target 1: ₹578.55 · Target 2: ₹606.30
+   Size: 7 shares ≈ ₹3,661, max loss ≈ ₹194
+   Why: closed at a 20-day high, volume 2.0x average, RSI 72, ADX 32
+   📰 <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNVlZFa3dMNktaaGozYVlWT18zS2hNNjd6S1h2Y2hmUzB6dkdaVVdxbzhiSHgzUFEzbF9uTW9uNmN0WkdubkE4TzFBQjN6ZjNDZzVaaTJiektRbGFUZjFqWGtiREgzTms3ZVBZWlpPYmY1d253eFBsYkZaS1daUDhnSk1SZEZxZzg0X1ZZekExaXRyajg?oc=5">Poonawalla Fincorp Investor Analysis | StockIQ</a> (The Economic Times, 21 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxPZWFDZ1JIMVMxUFRWTXJPQnNWbXdaZi1pZy1oUWs4U21ZQl9UcUJDbXdnVTBlQUlPUWZKbEdxM01ZdW0yVVgtVGZlbWx4YjdJN1BqNnlkanpPZTRsa1RlVWQ4dDh5cXpkMTRVdTFpc1FWYmQ0UkRYb0U1UDBDSVdmazUza1RiVFgwdC1mUXVaN2NnbUVRcHNmRTZxYmdOeXVtaWRRUUlTdWh2TU01UEdfWVVsZ1hzcG9zSjVfbjEwbHNJMS1femJNSE1NN3NUZzRRTTJNVWM0Y0x4T1I0UE9hUDBtRmNQZ9IB3wFBVV95cUxOUXJ3WkhvcDFiYzRIejlTOGNqcXVjMTJRdU5XeVl6VEVmd19neERJbExlRklOX3dETUJKZ0VtOTV2SXI4M2VhVk1VU2xELThLZ2d6SXNlajBUdWhIV0tBZDBIeWdwXzBsNFhpeDZqVnhQVWtBU2pnUjlOclNzZHppNmhKbG1fMkhOcmUtQ0tRWlVHdjBfa2poOXc1SFpGQ2p2T01fZy1aUEZaOGphZzZEdUduSHVud0VBOTlQd2VzdmpDSm9qcE5IRDY2Zkd1eEpuV0RHU18tYlBYR2Z5U25V?oc=5">JM Financial hikes target price of Poonawalla Fincorp; sees 24% upside</a> (The Economic Times, 20 Nov)
 
-**2. FLUOROCHEM** · Gujarat Fluorochemicals Ltd. · score 90/100
-   Buy above: **₹5,010.00** (last close ₹4,978.60)
-   Stop-loss: **₹4,749.95** (−5.2%)
-   Target 1: ₹5,530.10 · Target 2: ₹5,790.15
-   Size: skip: 1 share (₹5,010) is more than your ₹5,000 per-stock limit
-   Why: closed at a 20-day high, volume 2.8x average, RSI 66, ADX 22
-   📰 <a href="https://news.google.com/rss/articles/CBMitAJBVV95cUxNS2xjNTVMVVlWS0E1TksxQXpRd1owVXF0RVE2cmE2dFlHOC1EN2VXQWk3X0dWbHpSM2RVUTVad2NER3I4RG1SOFo3amt3X0pOVEdYWjE2dmNyUzlUa21XS00zQm56VDNBUGF5cGJydUZXNUVLTmpINEpMUXRQVVREbHRTdmFyTU94aG9FMFlrMnhjRjh0Tm94QkdiZUlyNVlMT0VpLWhwUjQ4SzFGeURnS0phTWtNRk9Pd2g0Vld2QmVfVmpSTU5vZDVFdUVFRktMMVVkSFRpa2lzMjQ1Q0ZZTVl2X19qWjRkRjNmYnF5Yzd1cFNXRVdBUWZqRHdIdGIwSWhfb3ByQzhzOVFGbk42cnJqOGhlMkZCaDFJemdZb240NGhBV21sSXVSQVlfMXk0MDZkV9IBugJBVV95cUxQbzNoU0FPVGJJN3FPOVhxZERNWWpXZEFtTVRyM2RFSTJKaEV4aVpZaGJLb0lFVE1YSUEyMS1nTFR1TTBSRllFTHRZM1lFekY4dTVvcnFCSV84eXRYOGdnSWJPOU1GRFFTN1lBeWtMNzJTaXBqbHJzdGItUHNILTh1RF9vdG5zUllmaFJUdlpuYXB1TE83SERGZUx5R1BYVkZJT0U5S1A4Njhnb3lsYmJ3YlBRZDBuYzUzdzJQRVVCbDdNSElQeVhmNHlWaTZ1YnpObV9rUEROOVpTbWtNNjNRTV91OUlCYjhVREE2OWhjSGZSLTQyQS1oZ3J2X0syUXQ2RVFlbE5MLVgydHJyN29EYlJtNjJuSDRpSmZJdmF3dUdWMjI4NzBLMmZUZUJsREhzZmpycS1hSnR6QQ?oc=5">Trade Spotlight: How should you trade TVS Motor, Quess Corp, Avenue Supermarts, Gujarat Fluorochemicals,...</a> (Moneycontrol.com, 20 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOQ3lYN255dExfelVQWTNrSUZfZ3U5MjhISWEtQjRrUHZVbWhtc0V5aXNra1A1YzhiZ1l5WmFuRFBET0VUZVBfNkY2YWZZM3NIc2xnWEdYcmxBNFU2bi1mQzYta1hDRmNLcGVUYmd1UlpHR05yYVZJVDNQUTlVTkV2TW1nbGZLZEFiT3FTb29JR09EUWlBSE9BRHh4TQ?oc=5">Gujarat Fluorochemicals rises 3.10% in Thursday's session</a> (Global Banking & Finance Review, 19 Nov)
+**2. PHOENIXLTD** · Phoenix Mills Ltd. · score 87/100
+   Buy above: **₹2,307.25** (last close ₹2,285.30)
+   Stop-loss: **₹2,203.60** (−4.5%)
+   Target 1: ₹2,514.55 · Target 2: ₹2,618.20
+   Size: 1 shares ≈ ₹2,307, max loss ≈ ₹104
+   Why: 0.6% below its 20-day high, volume 1.8x average, RSI 71, ADX 39
+   📰 <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE56UHFHNnh1MHdRRmVueWd3Vy14ZFVRcGtTRWttUlZZM2dQNHQ5ZFBvS2d4UHJmamFaUlM2UEFaaEg1TjU4anVDOGkya0twQ0V3aGh3TGQ4Vm8?oc=5">PHOENIXLTD Share Price Today - Phoenix Mills on NSE/BSE</a> (scanx.trade, 21 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMi8wFBVV95cUxOT0otald4NTNJSTM5eXE0aWV5N3ZEQlpKdmhUZTVOT1F2ZmpBNUhaN1pxMktNUXhrbmUzUS1HY2FVZzR0MFVMcXh3dGlQYWs0dXZXQzh6RFA1SFJRcXhZZEFhVnN3dUFEVU9ORlFySGFEUXpQUmlmMk9WQTBtZEhPWHVuMHRxTURmR1hsZlpEOXVIODlBV2c5UEkxd1JpbW9PTlJBMy1lSENUZmo1WFFWR2xaY2c4UHlZSElFdnJCaXprbU5rbmRWVURScUpENDVTS2paaEVoS3Y1bFNoQ0d0bUV5WjNvYlBqLW1mSnRmci1QdjDSAfgBQVVfeXFMT0kxRDBZZWZZWWJnMzJKRU5iOWRoYWZmaU01R2xsbGZidGg2Q0dLV2VBR0hZT0x5ZXRDODczVXBTZTRkbHgxR3BRZktkeEFoeDAxQURVeE9QSnN2Y1FpUG1NRWpUdkROd050b2NMRnV4V2twTnR2VDQ5TTBmdHhESTBuWDV6UWxmR1djc2Z6cldlMlRRUkczS21nVmV4OUlGTXNQbmNQNmhYZXVycFBSbjlKNnpFb1hqQjFzaDBnZnVmeGQ3UzBXMUsxVVp3ZzJkTHhoXzVHRTYxUFlxV3NWU2Zpc0RMMDU0cjdpM3IzSnlMSUhQWm9hMlU?oc=5">Hero MotoCorp, SAMIL, Phoenix Mills: Stocks to trade — Check key levels, targets & stop loss</a> (Business Today, 20 Nov)
 
-**3. TVSMOTOR** · TVS Motor Company Ltd. · score 86/100
-   Buy above: **₹4,610.65** (last close ₹4,601.40)
-   Stop-loss: **₹4,425.80** (−4.0%)
-   Target 1: ₹4,980.35 · Target 2: ₹5,165.20
-   Size: 1 shares ≈ ₹4,611, max loss ≈ ₹185
-   Why: 0.7% below its 20-day high, volume 2.0x average, RSI 67, ADX 25
-   📰 <a href="https://news.google.com/rss/articles/CBMitAJBVV95cUxNS2xjNTVMVVlWS0E1TksxQXpRd1owVXF0RVE2cmE2dFlHOC1EN2VXQWk3X0dWbHpSM2RVUTVad2NER3I4RG1SOFo3amt3X0pOVEdYWjE2dmNyUzlUa21XS00zQm56VDNBUGF5cGJydUZXNUVLTmpINEpMUXRQVVREbHRTdmFyTU94aG9FMFlrMnhjRjh0Tm94QkdiZUlyNVlMT0VpLWhwUjQ4SzFGeURnS0phTWtNRk9Pd2g0Vld2QmVfVmpSTU5vZDVFdUVFRktMMVVkSFRpa2lzMjQ1Q0ZZTVl2X19qWjRkRjNmYnF5Yzd1cFNXRVdBUWZqRHdIdGIwSWhfb3ByQzhzOVFGbk42cnJqOGhlMkZCaDFJemdZb240NGhBV21sSXVSQVlfMXk0MDZkV9IBugJBVV95cUxQbzNoU0FPVGJJN3FPOVhxZERNWWpXZEFtTVRyM2RFSTJKaEV4aVpZaGJLb0lFVE1YSUEyMS1nTFR1TTBSRllFTHRZM1lFekY4dTVvcnFCSV84eXRYOGdnSWJPOU1GRFFTN1lBeWtMNzJTaXBqbHJzdGItUHNILTh1RF9vdG5zUllmaFJUdlpuYXB1TE83SERGZUx5R1BYVkZJT0U5S1A4Njhnb3lsYmJ3YlBRZDBuYzUzdzJQRVVCbDdNSElQeVhmNHlWaTZ1YnpObV9rUEROOVpTbWtNNjNRTV91OUlCYjhVREE2OWhjSGZSLTQyQS1oZ3J2X0syUXQ2RVFlbE5MLVgydHJyN29EYlJtNjJuSDRpSmZJdmF3dUdWMjI4NzBLMmZUZUJsREhzZmpycS1hSnR6QQ?oc=5">Trade Spotlight: How should you trade TVS Motor, Quess Corp, Avenue Supermarts, Gujarat Fluorochemicals,...</a> (Moneycontrol.com, 20 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxOWWJRYXl6T1I2cFdtbDlxdjZGcFdxWlB5aHNqVE5rSHFqaGxSaDFFT1YxNElvQ0J1Um02N0kyTVozci1GR0QybkxkVmF4cHA5cmMxbUZUdEN0VTJOdDdoVnIwd3ktX2ZZSVdaOGNlNHkwbnFlaldJcXRTRld0bHZlTWh5aW1sY1RZbVNJdmF3U2IwaHFzaWYzaXVucl92S096OWFkb1JjSEFDdGMxUnhMbXdvcFdJV1N6UGZfLWlnbHZBTmZWcTM2S19HSzhfbmZLLWNUcFMtaEgxZlFaak5j0gHnAUFVX3lxTE5xQnYyaC11OUVSUmlFWnpyalhNcGNFd3NhNU0xYjU1bjlCbVpkbUZscDEwa19wWUhhX1h1MEltTldfZHZwVWJNTUlpNFBFSC1nYWhLZGowUURUUGJFMnNJQXhkZmtpWk01TWNfNy1IeVNuMWs3aE5vZkhiNzBYRDI3RzBUdHpwUHB4Tmw5Y0lTTDdzQzNwYlVzU1hRQTBkcjZBVlFZUFc1TTBXUkY4bV9LRTF2LS1iVkRObmhxNlZ0TGtxYmdFZ3MxMkpVT056VDZJR0JOTWNyeW1BbldDelBURXQwZTVMdw?oc=5">Six Stocks To Buy Today, November 20: BHEL, TVS Motor, Physicswallah, And More</a> (NDTV Profit, 20 Nov)
+**3. APOLLOHOSP** · Apollo Hospitals Enterprise Ltd. · score 87/100
+   Buy above: **₹9,301.10** (last close ₹9,200.00)
+   Stop-loss: **₹8,970.85** (−3.5%)
+   Target 1: ₹9,961.60 · Target 2: ₹10,291.85
+   Size: skip: 1 share (₹9,301) is more than your ₹5,000 per-stock limit
+   Why: closed at a 20-day high, volume 2.7x average, RSI 70, ADX 30
+   📰 <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFBNUlhSa2VGWDR5cGZFeXZNSVBNSDVRckFTNVlfeEtkaGVXSDVzZWhFSVIxRDU1cjRORHhRTDBXaTk1UmN2RGN3Nl9IVWdfNzVCSldTNjRqMjAyR0pPUHhzRWRxMUJJNEFwMlJ4ZFRFRWRaVk4ybkVlMw?oc=5">Top Gainers & Losers Today, November 20, 2026 at 12:00 PM IST: Apollo Hospitals Enterprise Ltd Leads Gainers</a> (HDFC Sky, 20 Nov)
 
-**4. EICHERMOT** · Eicher Motors Ltd. · score 79/100
-   Buy above: **₹8,088.65** (last close ₹8,058.50)
-   Stop-loss: **₹7,764.75** (−4.0%)
-   Target 1: ₹8,736.45 · Target 2: ₹9,060.35
-   Size: skip: 1 share (₹8,089) is more than your ₹5,000 per-stock limit
-   Why: closed at a 20-day high, volume 1.6x average, RSI 69, ADX 33
-   📰 <a href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxQN21KNmJoLVNDaTBMM2pBS2lZZFNRMktzMUpUTlNNZzNxZWJTV1QycWV6UmVpQjNQRUlCeDZtZ3lxYXlHNmV4LUR2eVNEQXhDYXZNbTh1RkFLM0gzSG40clZqMGhkdzhVTUY0Q1BWck94R3EzdmJkSjg4S3J2Z1VDV0xHamZBbVE1TkMyMzRQUzM3TFpJYjJhWXRmTUlxbU5kV0dpcTVkRzBkaWtaNDBfcVYyU0ZlN2gzSW5lZ2l4RkloMVRuOXZ2OFNHdHI3WU9pMVpORThYOURBaTNnMG1IZG9rNVlqalU20gHuAUFVX3lxTFAzcVVIdzFRWWlLX3hDNjRyZjJ3b3VxR3NWQVJtNE1LaEJ1VGNDdWFQVzFvb21DNklmV2xhZTN1V1FxVFlDYjVwLTQ4U1NyUVNzaGgzaWVEalZRY2NMdVZvY1BYb092dFJDdW1oQmk2OVBGZlNXNl8wU3JpS1U0aTBqU1ZtV1R6dFZWcEYwMC1Bd0xJWVQ4TDdVZFV0SU8yZkkyeF9LX0d5anM2RHdHUUFoSmtWczBYNloyRFpkWUE2ZnhDRHdXOTJFTUZ0SnNlVGlnUnZsQVVEQmw5RnpvUHVWV1RfazF6R0VNWGpsYlE?oc=5">Maruti Suzuki shares jump 5%, M&M, Tata Motors, Eicher Motors rally as Nifty Auto surges 2.6%</a> (Moneycontrol.com, 19 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxPMl80NjIxRmpjQjAzd1JTb0tyRWwwT1dRaWNKWk54b2ZkZnl1Q0xRdzBNYTJWejBlbG92djY3VFRiaXc3VUNEMGZLSzJ3d3FwNER5TnRQYTBXV3QzcXpoRmNzYXFRRERSd3ZiVHZ3MGhmWlluekhtalpabndDbUlXV1AwOUQyRmF3VFRHejJnQ3RRQm5LRnhnXzI3RjFTZjA5MGZTRk1FRDVKS0dBRVU3aTRxYw?oc=5">Eicher Motors Q2FY27: Revenue up 20% to ₹7,422 crore, PAT rises 15%</a> (scanx.trade, 19 Nov)
+**4. PRESTIGE** · Prestige Estates Projects Ltd. · score 82/100
+   Buy above: **₹1,690.80** (last close ₹1,680.00)
+   Stop-loss: **₹1,611.60** (−4.7%)
+   Target 1: ₹1,849.20 · Target 2: ₹1,928.40
+   Size: 2 shares ≈ ₹3,382, max loss ≈ ₹158
+   Why: 1.4% below its 20-day high, volume 3.5x average, RSI 63, ADX 30
+   📰 <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE83a0lvd0c2M2w5dFYzd3RVSTJqdFpVaV9iU2gybEJEVi1MWEVtVDVORk9ieFUzY3hMYkszRk9mTFBrNmVpaGVCOHdkZ1pYX3hiV2ZGOW9FOVZRRk0?oc=5">PRESTIGE Share Price Today - Prestige Estates Projects on NSE/BSE</a> (scanx.trade, 21 Nov)
 
-**5. MEESHO** · Meesho Ltd. · score 78/100
-   Buy above: **₹260.55** (last close ₹258.85)
-   Stop-loss: **₹247.45** (−5.0%)
-   Target 1: ₹286.75 · Target 2: ₹299.85
-   Size: 15 shares ≈ ₹3,908, max loss ≈ ₹197
-   Why: 0.9% below its 20-day high, volume 1.7x average, RSI 70, ADX 28
-   📰 <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOeHJNN1ZJNnpia0JwRTJfdFl1d0NlWDVJZFpUR1JRM2tPS0JKYUFNZ1ZLTUhDbVpfamMwWUpzLVNqUmZ0a2IxQU5mWU8wVWM3X3pTRFIzeHdCRjZLQnpJU1lBRlVSd3ZJQ2NRM2FZcWVBMl9YUklYTFV2SVRYd25CZGJ3MlpBM3pUN2FqaktyUllmODhfWEgxeElyYVdldEZ3a3hkeTQ1aGdLenRTSlIzTHdqU1E?oc=5">SVF II Meerkat sells 3.38% stake in Meesho, holding drops to 5.18%</a> (scanx.trade, 19 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxQOV9tZFpHSFNsc2ZXUnFnb3JCbzRBcWEtRXUydVFSZFR0ZkVsQWFzdG9aY2U1T2ZONHdJLWdodW5ac292SWU2OVY4Yk51aUI1ZzVES2VfazU2RFFjZ0tjUFpjek1rbVhjRkxrTnMyMnF2UGVJbkNqWXdyVHRMTWp1RkhMRmRLdExKY1B0NWlBZnpWYUNxUU95U1lEWnF4b1FjWllRVDZVZktlYkVoMUlyWktMXzU4ZE5GZU01anp4NDZDcmZSVnI2NjVXa3BPZkNKeHhibERPaGhMQdIB3wFBVV95cUxQQ0lybENCcjRxeEJTZW9mZVlKRy1zVllYbkFlbUh6Zm5TejcxMXlOenFpQUY3U1dnN2VzZFNDX2NSSmhHODR1dkhYYm0xV3p2bTQ5MlVhamhJSFVhNGk0U25RSWNSTWpvSnlGcXJyTTJJbW45Q1ozX1VRUUVYNXpiV3FrbDk0QmdDUzFlZTNrQlZYR2FFVjFzX1ZMYXZhay04d2FWeEhSbVljRGFJbDkzeE1XUUw1ckhmYlVBVzJnV3VkZ1hVYWswMDg5eHo0Q3Jvems4clF3MUFxb2poaGRZ?oc=5">Technical experts recommend TVS Motor, Maruti Suzuki, Bajaj Finserv and Meesho; check targets</a> (CNBC TV18, 19 Nov)
+**5. LICHSGFIN** · LIC Housing Finance Ltd. · score 81/100
+   Buy above: **₹627.10** (last close ₹614.90)
+   Stop-loss: **₹599.55** (−4.4%)
+   Target 1: ₹682.20 · Target 2: ₹709.75
+   Size: 7 shares ≈ ₹4,390, max loss ≈ ₹193
+   Why: 1.4% below its 20-day high, volume 2.1x average, RSI 72, ADX 33
+   📰 <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQSGNkMEdSdk5xcGpJSEYyV3ZmZGdwd2dUZHhhdlpTcThCSHk2UzlIZlVNQVlDTTlsdzV2RlBJTktLSU83REtmZ2d0UDZUNWVXeEs4a3A4dVhEeVNEQ0dwMmNMamg1QWdhSHNQRm5DUHU5d3pJWnR0RXlLWXYyVnB2SU5nQUh3VUM4LVNBNUVEeC1hc3BIekpmTmJiQUxQblhhMGZoWVl6U1VWeGh4Ymh3NlBYQVY4ekZaSWc?oc=5">LIC Housing Finance shareholders approve Sandeep Kumar as MD & CEO</a> (scanx.trade, 21 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNeW5OazdLam9BSG5RUElGZ0N2cXhCWXpnaUV1YUxBd0NYTHQ3dnR6SnluTWZwN2VvdVVTX3RpeXZOSFd4ZXVQcmhIVlczc3lmN0xNUUdNNEM3MlZWWEliNEJoQS05ZUJhU3VmSTZxYWx5YmtWU20xU0ZZYlJJaXRmUDJuREtKb1g3YTNMNjNRSTlDdw?oc=5">LIC Housing Finance Ltd Share Price Today,, LICHSGFIN Share Price NSE, BSE</a> (Business Today, 20 Nov)
 
 **━━ Top 10 with buy price up to ₹500 (all NSE stocks) ━━**
 
-**1. DCBBANK** · DCB Bank Limited · score 67/100
-   Buy above: **₹237.50** (last close ₹235.18)
-   Stop-loss: **₹224.55** (−5.5%)
-   Target 1: ₹263.40 · Target 2: ₹276.35
-   Size: 15 shares ≈ ₹3,562, max loss ≈ ₹194
-   Why: 0.3% below its 20-day high, volume 0.9x average, RSI 68, ADX 30
-   📰 <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPWmFUMU11VXNTNVZNQUdvYlN6V21XV0NTaExUSVhTQTRVTGgwRzJXOGdYQURTN05VQTNHU0d4UHdWMS1Fb0VJdXpFb1B6X2dZTmctYnI5dUt5OVlFUFEyb3pHaHJSWEtSeC1EbXBuRFNTT0VuUmtJakZLc2QzSDZTeUplUEk2Tmgxbmc?oc=5">DCB Bank Share Price Near Yearly High: Price and Valuation</a> (Univest, 19 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxNazlVRlozVkJzbDdyY0xmMFhiM0NKX25BX1NiUU94VmVubWYzOVY3dUlxUGVZSEdSLUhZb0NhQkxWRVFnMTlfQkdnbFNlQmpIR0hNUnhlQV9SUFByRXhHT0VwS25uUTVRM0lrTW05U0k0a1FNemxaNmVWWlN5VTZkNDBsQkpzQQ?oc=5">DCB Bank Investor Analysis | StockIQ</a> (The Economic Times, 19 Nov)
+**1. IDFCFIRSTB** · IDFC First Bank Limited · score 73/100
+   Buy above: **₹87.80** (last close ₹87.26)
+   Stop-loss: **₹84.35** (−3.9%)
+   Target 1: ₹94.70 · Target 2: ₹98.15
+   Size: 56 shares ≈ ₹4,917, max loss ≈ ₹193
+   Why: closed at a 20-day high, volume 1.5x average, RSI 70, ADX 32
+   📰 <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5LUmpHcGlvSy1IOTIzN1o3b0Rrc0FpS0FJYlFHeXdQR3FtZ2x0bV95akZoYkJmaVFYZnVXb1VwSlN3X3h3WUxtWHBjc1hldUNLdWRBc1BTVl9sT29XNzUwdmRXTjAzNkFmblJkM1RxVEFGUQ?oc=5">IDFC First Bank Share Price Target 2026</a> (Univest, 22 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMijwJBVV95cUxQZDBCQkZWMkN1U0M5TF9iNWdHRVpVRzhwSElWeEUzMEY3RzZHa1pQMTM0ZU44Z251cjZ4T2NhODZMNEh3bk5aSXN1X3VlaHZvV2hzX0pTQWhnWjRzM01YcWZJMVZ4RUlmWFVZY3dmS2NoNmN0WDd0YXZCNXJvZnd1WlRDQ0E1SFl5ZDdzYkdMMldaZjFIMHplU0hrVkprZnNaVHhZOExkb3dvTnFMckU1SVJWR0c0MnNEVFdzLURWRTNxUE1pci1pVTJibUVQZGRlVkpsTE5mSnVzTTFqSEJIRjgtNGU5djNBZlRXQXdYSWhuZjFiQkdSUWhyOVhySGN2VkFjeXlYWEd5WmtHWmN30gGUAkFVX3lxTFBsaFZNQW92dXY5dEptWGpmT3NxMjFxQXRpRFMzU2E1TVNhR1FxUlFKV1BNRmVZeW9QbjNLQjdhVWdoa1RIWGUxZkhnbHozMlBLNk85NTdLQjEwNWlBNFBSZHlVSmF2VkNSeGJrc1BZR2g2M1dPLThoTXJMVEpLNncxMXB3amR1VmJNcUJwQ1UySG5GVm9GTzg3bkU2SjI4VGN5N3dqUGY2UmhRQktvRTY3ODNBbW95ZUZtaWxienJfRk90cHEyeE5hbEJIaUQyRWIzVWI5d2hWdTdnaFg0WjViU2c2NFJveU1wamxLWEtxTTRoeURLYXRyOXR3YnVlajcwN181YWpTWDA2TC12cmJVME9iTA?oc=5">Best 3 stocks to buy under ₹100: IDFC First Bank, Jayaswal Neco Industries, Sagility by Sumeet Bagadia | Targets, SL</a> (Livemint, 22 Nov)
 
-**2. ABCAPITAL** · Aditya Birla Capital Limited · score 61/100
-   Buy above: **₹419.45** (last close ₹417.05)
-   Stop-loss: **₹402.15** (−4.1%)
-   Target 1: ₹454.05 · Target 2: ₹471.35
-   Size: 11 shares ≈ ₹4,614, max loss ≈ ₹190
-   Why: 0.7% below its 20-day high, volume 0.7x average, RSI 66, ADX 30
-   📰 <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZnIydV9FS2FGdGdjNkNiNGhmUlowXzRJM096cnk4WjlPOXFMVFhCbWdMdVhEZlBybXlDanNuOEpQVGl0MUc0amVPMVRwRDhkUkxfWmZLeHFiNTJmRlAzMHlsTUtnbDhUZ2c1c250MXA5UjJnQ25iZ01paEg4cDRYWlJESTEzT05wNFQ2ZldJQlp5QkpabXJlM0dHVmNzNjhOUHdrdVJ6M3g5TWdjV3V0RjMzbk1FRmdVdnUw?oc=5">Aditya Birla Capital Limited allots Rs 400 crore NCDs at 8.0668%</a> (Multibagg AI, 19 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcTVJUWZ5NlRVZHBJTUhILVctck5XWDB0d1dtaVJFUG1oT2hPVnhadlppdEs5Tko0cVNrc2FLenR4alVXN0FfVjVvOVFRSl93ZkdqWDRWS01XVEZPN2s5RUhRMWU2RWVvSFNodVM2QkExRE9xcm1HZVZfRTVOWnZVTmlEN2ZUQ2cyUE8yQWxwSk11VWI4WGVpbGNaQ2wtblZ5ZzBSb0FlS2JNSFJoWEI1UHBqT1VBS21oZ0dfNTBoTG4?oc=5">Aditya Birla Capital allots ₹400 cr subordinated NCDs at 8.0668% coupon</a> (scanx.trade, 19 Nov)
+**2. FEDERALBNK** · The Federal Bank  Limited · score 71/100
+   Buy above: **₹375.05** (last close ₹373.50)
+   Stop-loss: **₹361.45** (−3.6%)
+   Target 1: ₹402.25 · Target 2: ₹415.85
+   Size: 13 shares ≈ ₹4,876, max loss ≈ ₹177
+   Why: closed at a 20-day high, volume 1.3x average, RSI 70, ADX 29
+   📰 <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1qc0dpRFBQNUdfQ0hHb0JKS1pVNGthUFV3QXVOTC1TTXN5SlNJZVdRNWpSdmFMM1l3dC1SMWRWWXdEM2U0WGJqYlVyWU9rM1M4NmNMRE50Y3FlcldnNGxBTUdFUWo?oc=5">The Federal Bank Limited (FEDS.L) Seasonal returns chart - Yahoo Finance</a> (Yahoo Finance Singapore, 21 Nov)
 
-_Only 2 stock(s) scored 60+ for this list today._
+**3. ORIENTHOT** · Oriental Hotels Limited · score 62/100
+   Buy above: **₹182.05** (last close ₹179.98)
+   Stop-loss: **₹174.30** (−4.3%)
+   Target 1: ₹197.55 · Target 2: ₹205.30
+   Size: 25 shares ≈ ₹4,551, max loss ≈ ₹194
+   Why: 1.0% below its 20-day high, volume 0.6x average, RSI 72, ADX 52
+   📰 <a href="https://news.google.com/rss/articles/CBMiekFVX3lxTFBaVEZ1T0xtMGVUeF9PVGZqMDNMcHJ3UFVUQW9KbkdTczJJM2pGaTF0alFBYzRKMjUtMWRGaVJwb3MxY3lPR0ZEYkg3RGJCQ0tpdXE1VWZ5d0x2SDFOeG9rUHp6dGVlZldlbXVwSERvNC02QkR6dGd6ZHJ3?oc=5">IHCL and Oriental Hotels Announce Merger Deal</a> (https://safariindia.com/, 20 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPZjVqbTJKdl9CaUdlOXEyYkc1OGRodTlwd2FNS0JyMHNpN2R0UHdwRXd1Qzhka2cxaVpmUHk3ckhwc3JLZENLVFdzSE1zdkZveDVwdnoxWXh2bTdtUFZjMjhqM0ZiWmcwSVM3VG9yNHpvWTZfTFFhMzdnZ3FKWEV2Z3llQm9HMkNmZV9NanlYVXBCdjFTeDhOMGc3NVZPVHRvdGVpMjh0NG1kcnRLUVQ4?oc=5">Oriental Hotels Ltd is Rated Hold by MarketsMOJO</a> (MarketsMojo, 20 Nov)
+
+**4. TFCILTD** · Tourism Finance Corporation of India Limited · score 61/100
+   Buy above: **₹172.30** (last close ₹171.85)
+   Stop-loss: **₹164.20** (−4.7%)
+   Target 1: ₹188.50 · Target 2: ₹196.60
+   Size: 24 shares ≈ ₹4,135, max loss ≈ ₹194
+   Why: 0.1% below its 20-day high, volume 0.4x average, RSI 70, ADX 21
+
+**5. GHCLTEXTIL** · GHCL Textiles Limited · score 61/100
+   Buy above: **₹146.55** (last close ₹143.57)
+   Stop-loss: **₹136.00** (−7.2%)
+   Target 1: ₹167.65 · Target 2: ₹178.20
+   Size: 18 shares ≈ ₹2,638, max loss ≈ ₹190
+   Why: 4.1% below its 20-day high, volume 1.7x average, RSI 68, ADX 23
+   📰 <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPR0xVNjZ4WGVIOGU0ejF4X3NGakdmbC10U2VVdkEyb3pFRFFYenlqY2piRUNLZndGTHY5cXhWNlFyUVBCLWhRajk4Qm1jWXFab3ZmSW9VY0FTWGNCaUstWnJ2cEkxd3ZVelFSUjM2TEdVS3Q4aFl5a3dYM3JxRWtXODIyOHRTUGFrMkhic1dCNnI?oc=5">GHCL Textiles Investor Analysis | StockIQ</a> (The Economic Times, 21 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOMUxrN29sQmt2NzZyRXZTR0FTcjB6d1d2UlhMZzlFR0xFNzhMN2dNaHNjeVZSQ0JGR3FGUkhNLVJrVHRzbjhRWUgwLWUyYml6RXlfWWlHek4yczV5S2pJQjQxOTNOTmI3MDFIblE2Rjh2Q1pzSGJ6UllaU1gxSGJHOWtISEZ3NWFxQzVTQWYydVhfbGJ3ZzlQZDRJU0NwYUxOTUVYUnMzYklsa2doYnhQUHVibUw?oc=5">GHCL Textiles NSE:GHCLTEXTIL Volume Surge Clarification</a> (Kalkine India, 20 Nov)
+
+_Only 5 stock(s) scored 60+ for this list today._
 
 _Rules: buy only if the price trades above 'Buy above' within 3 trading days. Exit at the stop-loss, no exceptions. At Target 1 book half and move the stop to your buy price._
 
-👉 For live updates on a stock, reply e.g. <code>SUNTV start</code>. Send <code>help</code> for all commands.
+👉 For live updates on a stock, reply e.g. <code>POONAWALLA start</code>. Send <code>help</code> for all commands.
 
-**Track record**: 16 closed trades, 6 wins, 10 losses, win rate 37.5%, average +0.54% per trade. 22 in trade, 11 waiting for entry.
+**Track record**: 18 closed trades, 7 wins, 11 losses, win rate 38.9%, average +0.42% per trade. 25 in trade, 12 waiting for entry.
 
 ⚠️ Computer-generated signals from price rules, for learning and paper trading. Not investment advice. Past patterns do not guarantee future moves.
