@@ -1,114 +1,82 @@
-**📈 NSE swing setups for Wed 25 Nov 2026**
-Prices up to the close of 2026-11-23
-Market: 🟢 **Bullish**. Nifty 50 25,350 (-1.75%), RSI 67
-India VIX: 17.7 (+2.2%), normal
+**📈 NSE swing setups for Thu 26 Nov 2026**
+Prices up to the close of 2026-11-25
+Market: 🟢 **Bullish**. Nifty 50 25,819 (+1.85%), RSI 72
+India VIX: 17.7 (-0.2%), normal
 _Not available today: NSE filings, NSE results calendar. News checks are incomplete._
 
 **Updates on earlier picks**
-⌛ SONACOMS: time limit reached, closed at ₹886.00 (-1.64%)
-🏆 WELSPUNLIV: Target 2 ₹275.65 reached (+17.64%)
-⌛ RATNAVEER: time limit reached, closed at ₹403.30 (+10.03%)
-🟢 DCBBANK: entry triggered at ₹237.50 (2026-11-23)
-🟢 POONAWALLA: entry triggered at ₹523.05 (2026-11-23)
-🟢 PHOENIXLTD: entry triggered at ₹2,307.25 (2026-11-23)
-🟢 APOLLOHOSP: entry triggered at ₹9,301.10 (2026-11-23)
-🟢 PRESTIGE: entry triggered at ₹1,690.80 (2026-11-23)
-🟢 IDFCFIRSTB: entry triggered at ₹87.80 (2026-11-23)
-🛑 FEDERALBNK: stop-loss hit at ₹361.45 (-3.63%)
-🟢 ORIENTHOT: entry triggered at ₹182.05 (2026-11-23)
-🟢 TFCILTD: entry triggered at ₹172.60 (2026-11-23)
-🟢 GHCLTEXTIL: entry triggered at ₹146.55 (2026-11-23)
+⌛ SBC: time limit reached, closed at ₹68.27 (+1.29%)
+⌛ ENGINERSIN: time limit reached, closed at ₹288.45 (-2.05%)
+🟢 ASTERDM: entry triggered at ₹797.80 (2026-11-25)
+🟢 OBEROIRLTY: entry triggered at ₹1,868.05 (2026-11-25)
+🟢 MARICO: entry triggered at ₹925.85 (2026-11-25)
 
 _Sizes for capital ₹10,000, risk 2.0% per trade._
 
 **━━ Top 5 at any price (Nifty 500) ━━**
 
-**1. VIJAYA** · Vijaya Diagnostic Centre Ltd. · score 78/100
-   Buy above: **₹1,640.30** (last close ₹1,572.60)
-   Stop-loss: **₹1,548.75** (−5.6%)
-   Target 1: ₹1,823.40 · Target 2: ₹1,914.95
-   Size: 2 shares ≈ ₹3,281, max loss ≈ ₹183
-   Why: 0.9% below its 20-day high, volume 2.1x average, RSI 65, ADX 21
-   📰 <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOVHRnTVVYYzlpQUdqNlVBazVTejhQRm5TaWlzaFdJdEhOQ21pRXJKb1JsRXlNOGRHVE40RUpKWGF4T2NCZWNhQmZ4S3N2QUZGUldpY2tHZndwOUNqclNnWUNMcHZoM3hQV3kyMTZxa01USzFXT2VTN3J1VklCQ29GVWRFb1F2YlRBR3N3VEtkTFlxc0oyZGplOXJwNjZQRXM?oc=5">Vijaya Diagnostic Centre Ltd. Repeats 52 Week High Move</a> (Univest, 23 Nov)
+**1. INDIGO** · InterGlobe Aviation Ltd. · score 84/100
+   Buy above: **₹5,776.55** (last close ₹5,720.00)
+   Stop-loss: **₹5,551.20** (−3.9%)
+   Target 1: ₹6,227.25 · Target 2: ₹6,452.60
+   Size: skip: 1 share (₹5,777) is more than your ₹5,000 per-stock limit
+   Why: closed at a 20-day high, volume 1.7x average, RSI 69, ADX 31
+   📰 <a href="https://news.google.com/rss/articles/CBMiuwJBVV95cUxNUU1LTjhwQzNoYWk2a1FIWTBOYVdWc0FieENwNzg0RTA1cUhCRTBjMkhRNExLQUhUX3VSOXRGX3BSbzZfS05jX2FYRHpVVXRGNjJVMXpwVmJPZEI1RW9rT05iQ3pwSVFCa3dBTkRBM1NqUFdvMjhteHN3ZGNMN0Nfdnk1NHVha3YwZHVpUDNSSndjbGhCNkZNd3hWM0pJMzFOMXBoSXlnVmtzQXRRQ051MDlTbnRzcWN2c2xWSG95WFp6UzdHSTJEcHZSN1ZOQjhKMVNHOWZLQ0Zta1M4bkNsMGJxVHJncDZaU2NJWHhFRDVhU3Iyak9Eek5uemZRNEh2Wk9ZX0dlT3JFM1VZQWtmMWNVcGxBRHM0ZEcxZ2xabUhTNjNIcTl0bmMwNE1HN1piTVdldl9XMmYzNknSAbsCQVVfeXFMTVFNS044cEMzaGFpNmtRSFkwTmFXVnNBYnhDcDc4NEUwNXFIQkUwYzJIUTRMS0FIVF91Ujl0Rl9wUm82X0tOY19hWER6VVV0RjYyVTF6cFZiT2RCNUVva09OYkN6cElRQmt3QU5EQTNTalBXbzI4bXhzd2RjTDdDX3Z5NTR1YWt2MGR1aVAzUkp3Y2xoQjZGTXd4VjNKSTMxTjFwaEl5Z1Zrc0F0UUNOdTA5U250c3FjdnNsVkhveVhaelM3R0kyRHB2UjdWTkI4SjFTRzlmS0NGbWtTOG5DbDBicVRyZ3A2WlNjSVh4RUQ1YVNyMmpPRHpObnpmUTRIdlpPWV9HZU9yRTNVWUFrZjFjVXBsQURzNGRHMWdsWm1IUzYzSHE5dG5jMDRNRzdaYk1XZXZfVzJmMzZJ?oc=5">Trade Spotlight: How should you trade Hero MotoCorp, InterGlobe Aviation, Eternal, Belrise Industries,...</a> (Moneycontrol.com, 26 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPNjlSa2lhMGRHSUZweFpZOFh0bEdCNUR3cmxDNmVkTE4yNXdFWjRzWkpZY25IaDVsTWNGN20wY3FtN2wzN0g2eDNhMmVEMWFXY0JSU0xsQXZMLWdKbVNSTjAtdlh6UUZLV1loYnhnTEl5NE5ZQWFKbU9uR25tVFBqTUZuVkVUZDNhSmtSM1E0WkZHZW04SURLaHhyRldMejBDYmlpSm5wa1o0YW5TeEVnMW1NMG9PX1NLcFpyZk1VNDVQTXVxRE00U3BR?oc=5">Interglobe Aviation Ltd Rallies 3.27% and Holds Above All...</a> (MarketsMojo, 25 Nov)
 
-**2. ASTERDM** · Aster DM Quality Care Ltd. · score 76/100
-   Buy above: **₹797.80** (last close ₹790.35)
-   Stop-loss: **₹759.65** (−4.8%)
-   Target 1: ₹874.10 · Target 2: ₹912.25
-   Size: 5 shares ≈ ₹3,989, max loss ≈ ₹191
-   Why: closed at a 20-day high, volume 1.7x average, RSI 69, ADX 34
-   📰 <a href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxNWVRaanpsYlRBdUl1ZDlQWDIzOGl6QWZaaXJfXy1Bb005M2hQNk9qc3pudzJYVVQwTEhhdlhyQm9WcnhJTm4wUHNmRFp2dU95clRZNGJLYjRkQ212dHYtNnlJM01vaXN3Nm1QNkZnaVVONEpnR3h6T2xDdlJuTDkwRlotanpYeTdyVUprZG5aa3h1OVNBdDlsSlp5SnN4dDdwN3RYTzFfMTJjbzRoSE03dVYxRDctaXhLaDlnN3BUV1RobjlUWWlQb1RKNXlPQ1J4bVhTUm1OU2pkWFRBejRVQU9QVEsySEdjVGc?oc=5">Aster DM Quality Care Stock: Price Action, Valuation and Momentum</a> (Kalkine India, 24 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaWdTQzJ1eldqMENwVmRVMXlmekNyOTllclBCeXVrd1ZTVnU1SkZZbTcyZ1hVdmxvb0hKeTNCaU93dG1ueTFIcmtYcHZIeDNQVDVkTURhZkg2TDJ5VE9qRHpXUGpYYWRXYVllZFRhanZMYWdHemV0RGljVVBkdC1TMTBXd1ZRbDdUdkR1TGc0YzhtQ0tmQ3dtUnRJZFBMT2YyQkdNdXZEaEZWbGd3aUltb1h6WXJaMkNMak9UcHIxNngzdw?oc=5">Aster DM Quality Care ASTERDM: New VP Investor Relations Appointed</a> (Kalkine India, 24 Nov)
+**2. DRREDDY** · Dr. Reddy's Laboratories Ltd. · score 76/100
+   Buy above: **₹1,411.15** (last close ₹1,398.00)
+   Stop-loss: **₹1,372.70** (−2.7%)
+   Target 1: ₹1,488.05 · Target 2: ₹1,526.50
+   Size: 3 shares ≈ ₹4,233, max loss ≈ ₹115
+   Why: 0.6% below its 20-day high, volume 1.2x average, RSI 68, ADX 47
+   📰 <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxQZWVVbXRUQVVqYTlxNHVrOWFsc0dFeF9kQVVVb3VkR1V6WHZvcU81ektDYm9ZNU1kT2dmc3VVQ3JqRUVOQnhrQVNIQ0pNQnNWeFM1RTNpVTE4aW9IYlE4OXBydnNsYkZGRGpDMmsxYi03LTN4MXdwTWhYMUZVcmpkNGFHR2E4VzJEX0FBNlRka19WZkFsT2c?oc=5">Dr. Reddy's Laboratories (RDY): Allots 7,050 equity shares on employee stock option exercise</a> (Quantisnow, 25 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPYjJfZ3FlcUxoLXA4ck9TbWRMbG4tOURBUXBkT3lDRWNvQlluMmlkN3RIUXQ5WWI4WG1wenlEN2s1bnQyRlNaUU1BTVBocUpLd09yWkFGU21lUWR6b1VNX2lOamUwYUVqRUpJZ01HUlFud3pDSzU0cmF5V080STZSVTctOXVhVXFkcWN4MkJXUVZhRFNuNGlwRGlaRVltbzBKZms1LVktMGhPUzJONjdtblplVkZaU2djM01lRlhldnJucVdILXNEcHpXRQ?oc=5">Dr. Reddy's Laboratories ESOP Allotment of 7,050 Shares Nov 2026</a> (Kalkine India, 25 Nov)
 
-**3. OBEROIRLTY** · Oberoi Realty Ltd. · score 73/100 (news +5)
-   Buy above: **₹1,868.05** (last close ₹1,860.00)
-   Stop-loss: **₹1,793.45** (−4.0%)
-   Target 1: ₹2,017.25 · Target 2: ₹2,091.85
-   Size: 2 shares ≈ ₹3,736, max loss ≈ ₹149
-   Why: closed at a 20-day high, volume 1.2x average, RSI 65, ADX 31
-   ✅ <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQYlhodE5qNkpGaDZvUDdoZjRtQUNUSFJySng3bmU1dHVYb25IVFBCenA4STV3Q256azNXLTF4YXViYjVKR0Zwc2VhVjlqOU5LNE1fcHhZeDVCSjFOUGNVNWdQVm5BaGRVR2ktN21fOUpXYllhRlFOOUpLWDlNU0VSaG9McnhEZTM0Z3o0bGdkVVJRMm42bm9pOEd5QzE1VDFRZnJyaFFHeHJyZ1JqQnlB?oc=5">Oberoi Realty Q2FY27 Results: Net profit rises 39% QoQ to ₹759 crore</a> (scanx.trade, 22 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE5leFExTXY2WTFlRkFMQzBnVGFyM1JTaFN0YjYxeUtvcWtMa1hiMWxYTGhIQkhWd0dqSm4xT0FSWTgyX0U0MlQ2TGVFNWdQMDN1M21VYVZiejBmWHRKN0Q2eHlqbzRDZHo5MmNiWnlqSk1FU3BnbzJSX1A3dG0?oc=5">Oberoi Realty vs Prestige Estates: Realty Stocks 2027</a> (Univest, 23 Nov)
+**3. ICICIBANK** · ICICI Bank Ltd. · score 76/100 (news +5)
+   Buy above: **₹1,653.30** (last close ₹1,640.00)
+   Stop-loss: **₹1,600.30** (−3.2%)
+   Target 1: ₹1,759.30 · Target 2: ₹1,812.30
+   Size: 3 shares ≈ ₹4,960, max loss ≈ ₹159
+   Why: 0.3% below its 20-day high, volume 1.1x average, RSI 71, ADX 53
+   ✅ <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOeEh4eTJMZmJfRERkQWRtV1ZKaEJBN2duTGQ5bUpoVXJwR3B5UVR5cG5VczFiWXJBZkdlVDVXRzV3ZHBCclctMGY3WHhHQlJKWG05VmNWS0p1WFJydTlMTGg1NWdRdS1veDVSNU5BbWRDRGhUYVoyYWhGV1ZmdzZZcGw3LVk1UXVuWWNES2hQOENuQmM5bFowR2lESDBSa1dRd1VOalg3MUJ1ZEZrVU9wYXN6OA?oc=5">ICICI Bank shares at record high — Here's why JPMorgan rates it its top pick - CNBC TV18</a> (LinkedIn, 25 Nov)
+   ✅ <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxOdk4wTzJPSTg2eDc1ZFFTRmZaR0cxTHNyNnMtOWJac2tabTFBQ2gtSk1lbm9kdEJvb29kcnJTdXVKbm5NOFlKdDc0RW10dnBCTFQxeXBXcEhPREpYeUVzT0xRdVZRb0JmbFlfOGIyZ1dFR0VZSWhWYkgyYjFlalJ6aE1NUVJrWUtQTGhDckRKR2I2ZThIQ1R3OWdZMWk0d2N3eWxOdU83NHJDMWl6TjFyMVJNLTM0THdZOGd3OXBGZllHNHZYVzR2SXVYaURVd9IB0wFBVV95cUxPLW1mNWliUHpmZW5tMXJaV3phcEZVR0Z2MnFrajNEWExwX1ZIUFRwQ0NTQ1ZLeHp1bm9qa21FUEFXSnpPZHFYWDkyc2NFYnpKcVdqdVFXeFI1aVluQ0pMYkZRZzBHWEZoQzNXamd1X0Y2eFVpRF9MY0NZcWhOTU5QNEpiSC1oX1VtTXpGdUJfRXkyZTVvN0NfeFdaQjlyX3gxREg5Ml80ZVdJU2JIWjdRMGhtcldiUWxvaU1rZXhKQmVVV2lIVG5YNGM2ZmlXVU8wcmx3?oc=5">ICICI Bank shares at record high — Here's why JPMorgan rates it its top pick</a> (CNBC TV18, 25 Nov)
 
-**4. FEDERALBNK** · Federal Bank Ltd. · score 70/100
-   Buy above: **₹377.00** (last close ₹359.80)
-   Stop-loss: **₹362.60** (−3.8%)
-   Target 1: ₹405.80 · Target 2: ₹420.20
-   Size: 13 shares ≈ ₹4,901, max loss ≈ ₹187
-   Why: 3.9% below its 20-day high, volume 2.3x average, RSI 57, ADX 30
-   📰 <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQeGhLdEF2RkZnY2ZTRDRyd3N5V3pWNXd4YktzcjNPYkVrYUFfYnB6M3JpZXc4ZVpqMUlwOExUSzYtYldqNjNrbHFsblkwb0l3WHkwNWlEYmR6SFNKLUtQdll4R3hSSG16TlZuN3VvYWhRWU83c1E3Nk1sYVdMblZuM3QxT3FBX2EtaE9EUzdHbnlSN1FPREYwUWxSbnBaVmk4dnc4UWVnUkZkVHM4SWM0?oc=5">Federal Bank partners with PFRDA to simplify digital pension onboarding</a> (IBS Intelligence, 24 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQLWNuU1prM1VNaEFUTXBCeUdNYmEtUjVNXzJreThiZkpZN2p5V0pvSHljeGZkTnRpQ0FqejZGUTBGOHFmTGZtamxkLWpIczE2RFNyQWZCLURCVGJFaUlfdjNXNHZMaHBLTVQtTUtkX1VZZHdkNXNudDhoR2QzLThhakcwcm84Z0F6OUxhZjJyUUhYblR3ZnkyWWdkbWMxT0lIZG5Tcll0TEFxejkxU2UyTUFNQXhMaFZaRm4weG9hOWPSAcABQVVfeXFMUC1jblNaazNVTWhBVE1wQnlHTWJhLVI1TV8ya3k4YmZKWTdqeVdKb0h5Y3hmZE50aUNBano2RlEwRjhxZkxmbWpsZC1qSHMxNkRTckFmQi1EQlRiRWlJX3YzVzR2TGhwS01ULU1LZF9VWWR3ZDVzbnQ4aEdkMy04YWpHMHJvOGdBejlMYWYyclFIWG5Ud2Z5MllnZG1jMU9JSGRuU3JZdExBcXo5MVNlMk1BTUF4TGhWWkZuMHhvYTlj?oc=5">Federal Bank Enables Instant NPS Account Opening Through PFRDA's Tatkal NPS Initiative</a> (SMEStreet, 24 Nov)
+**4. GLENMARK** · Glenmark Pharmaceuticals Ltd. · score 71/100
+   Buy above: **₹2,742.50** (last close ₹2,719.00)
+   Stop-loss: **₹2,628.55** (−4.2%)
+   Target 1: ₹2,970.40 · Target 2: ₹3,084.35
+   Size: 1 shares ≈ ₹2,742, max loss ≈ ₹114
+   Why: closed at a 20-day high, volume 0.9x average, RSI 71, ADX 40
+   📰 <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPNThvaEZvS3FzbHlEYl9LbjFLdUJ5bktJd3lvM0UtdFZxNU5ETTlpamFTVzExSTBveDNiemVGUF9yLTFBOUFyS1gxdVNleVhMRGZHNmxVMmtfczVMbmpKcG5IdUh5TzlZR05HMFpXVVNFajI4WDJkdDdiY3piQTVMVHdmTWFPd0lGYkgxbzlYeU0tallQUlNlZg?oc=5">Glenmark Pharmaceuticals Share Price hits fresh 52-week high</a> (Univest, 25 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNZWV0WjZGU256NnR1RU5FWHN5QU0xNlItRVMzYkpQZmpnbHo2OEpzek42WXI3cDR6OEJFZkk1SHdOR0JGV2NlcEw1ajB2d0NjVlBWdjU4b2c5a242RG12VzhPeWhIY053TnpHMzdzZmZRN0hadUMyUV82WWp5Y3BDWnBIMUxRNFJBS1hUSXVFbmZvSlN0?oc=5">Vishal Sharma Joins Glenmark Pharmaceuticals as Senior General Manager</a> (https://hrtoday.in/, 25 Nov)
 
-**5. MARICO** · Marico Ltd. · score 70/100
-   Buy above: **₹925.85** (last close ₹919.50)
-   Stop-loss: **₹897.10** (−3.1%)
-   Target 1: ₹983.35 · Target 2: ₹1,012.10
-   Size: 5 shares ≈ ₹4,629, max loss ≈ ₹144
-   Why: 0.6% below its 20-day high, volume 0.8x average, RSI 68, ADX 40
-   📰 <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNYUVUWHVYcm5TZWw2VTFaQ1ZrUWNGdjRsQzJJRTlKVHczOEpibmNaM1ljdzBwVEtkVmFNVFNTRlBvaDkzZ2pzd09lSjJvb21SNUVZVFVJczlIZ3pyc3NnUW0ydVd4MEd0RHFIZWtpWEFxYTM4UEhjajF0Ry1vZHFfRkNLQS1wOHF5SDBINWtRb3VQUy1La3hLcVhrMkQ?oc=5">​Marico Penalizes Director Bhaskar Bhat Rs 3 Lakh for Trading Window Violation</a> (The 420.in, 25 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxOYXdZdVgxaXBSNVVPVHVXYTNhNjJvblBGVmRrdFE1Q293cnBZV2VieFlXLWVvbTk4VkhBVHd0RG5nQXQ1dnVjeTAwVW1qaEZNdTk0cE92cVZDNlBpQWoySXY3cUpsT2xURE0zZWZiaUxrbjdFZkdyU3lzNXRzZEVNbWxjcHN5bTk0cHlhOXAzUjEwbkpCTFZGdFJtMnNKQkhpOFp1eTA2RnhVOWdPN3YxREIxMEM4Q1VNSTZXZEdvSlJNcHJUT0lITS12RXBmU2cycDV0WDdGZGlFek0?oc=5">Marico Stock: Price Action, Valuation and Momentum</a> (Kalkine India, 24 Nov)
+**5. KARURVYSYA** · Karur Vysya Bank Ltd. · score 70/100
+   Buy above: **₹387.55** (last close ₹378.75)
+   Stop-loss: **₹367.20** (−5.2%)
+   Target 1: ₹428.25 · Target 2: ₹448.60
+   Size: 9 shares ≈ ₹3,488, max loss ≈ ₹183
+   Why: 4.8% below its 20-day high, volume 2.0x average, RSI 57, ADX 27
+   📰 <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxQaC1nZGxzZXd1Sm9zd2x2RXVfbV9rSVVFNHhSc25UZHBvMEc4T0VoRVQwc3pIM0tDUlFrRTlzUzliQmYxNUhvdUhzR0NObTJ5OVljZ1Z5Y01jUWl1WHJ2S3psWGtmeVN5WGR5TEEzUkU5VjhrNFFVOEwwRTVPS2RMZWQzaW9xQm1jbENVelpqSmtXTzRmQm1LUGpXdUFIbWM2MWVrcmZIQVdib0xyNzU4am9SNXV4dTd5NTlqME5ZejZ0Q3dtWkNaUVA5bmI0Wm0xTXVn?oc=5">Karur Vysya Bank Analyst Meet December 2026 Schedule</a> (Kalkine India, 25 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOc3ZaMVJEeWctM3JQZTI2RVZqTXlEb2YzUDZOa3RNLXFvalZKalBrQlZTbGVucVhkY3FKaUUyWlAwSTRWRTIwaWlNUTNkMnZvZWNiRDhaSS1tdm5USkRWT2NGZkZDcVZIcllrNjhiZjBTQUtwZm1zS1phV3BsOVVISmFFNFJfY3ZIUUNpWnhnUWxDMVZ4U09Ic1NuOGJveWRZeFJhbk51RnNqS3pnd0hQNVhOd09XcTBVM2dDWG1uX2pKeTkzWUVrMVAwMjlDXzFra3g5TkFBZmRnNVZC?oc=5">Here's Why We Think Karur Vysya Bank (NSE:KARURVYSYA) Is Well Worth Watching</a> (Simply Wall St, 24 Nov)
 
 **━━ Top 10 with buy price up to ₹500 (all NSE stocks) ━━**
 
-**1. SAMBHV** · Sambhv Steel Tubes Limited · score 82/100
-   Buy above: **₹180.20** (last close ₹176.90)
-   Stop-loss: **₹167.25** (−7.2%)
-   Target 1: ₹206.10 · Target 2: ₹219.05
-   Size: 15 shares ≈ ₹2,703, max loss ≈ ₹194
-   Why: 1.1% below its 20-day high, volume 10.9x average, RSI 62, ADX 21
-   📰 <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNMjdGZ2dzVGgyQVU1UHJCYVpYOWFGdk40WGhkNVdad09jM2FMQmZrdEhfQnlrX195SndzTzVGNkdqaWF1VU5LUlZmX0xHc3p4YXh2ZkxaWTI2TGs2UHdlWm1TZElDV2ZTRC1WUTd6Q2xmOGFKb0o3aHltbTRwZW1GSm4zWkhMMlBCQTdEc0tzTDh2X191eWJHSVhQb05GY3gyWXZUNnBnY1M0dzU2d1ZBMg?oc=5">Broad-Based Technical Strength Lifts Sambhv Steel Tubes Ltd to 52-Week High of Rs 179</a> (MarketsMojo, 23 Nov)
+**1. ETERNAL** · ETERNAL LIMITED · score 63/100
+   Buy above: **₹377.30** (last close ₹371.70)
+   Stop-loss: **₹362.40** (−4.0%)
+   Target 1: ₹407.10 · Target 2: ₹422.00
+   Size: 13 shares ≈ ₹4,905, max loss ≈ ₹194
+   Why: 1.7% below its 20-day high, volume 1.2x average, RSI 65, ADX 28
+   📰 <a href="https://news.google.com/rss/articles/CBMiuwJBVV95cUxNUU1LTjhwQzNoYWk2a1FIWTBOYVdWc0FieENwNzg0RTA1cUhCRTBjMkhRNExLQUhUX3VSOXRGX3BSbzZfS05jX2FYRHpVVXRGNjJVMXpwVmJPZEI1RW9rT05iQ3pwSVFCa3dBTkRBM1NqUFdvMjhteHN3ZGNMN0Nfdnk1NHVha3YwZHVpUDNSSndjbGhCNkZNd3hWM0pJMzFOMXBoSXlnVmtzQXRRQ051MDlTbnRzcWN2c2xWSG95WFp6UzdHSTJEcHZSN1ZOQjhKMVNHOWZLQ0Zta1M4bkNsMGJxVHJncDZaU2NJWHhFRDVhU3Iyak9Eek5uemZRNEh2Wk9ZX0dlT3JFM1VZQWtmMWNVcGxBRHM0ZEcxZ2xabUhTNjNIcTl0bmMwNE1HN1piTVdldl9XMmYzNknSAbsCQVVfeXFMTVFNS044cEMzaGFpNmtRSFkwTmFXVnNBYnhDcDc4NEUwNXFIQkUwYzJIUTRMS0FIVF91Ujl0Rl9wUm82X0tOY19hWER6VVV0RjYyVTF6cFZiT2RCNUVva09OYkN6cElRQmt3QU5EQTNTalBXbzI4bXhzd2RjTDdDX3Z5NTR1YWt2MGR1aVAzUkp3Y2xoQjZGTXd4VjNKSTMxTjFwaEl5Z1Zrc0F0UUNOdTA5U250c3FjdnNsVkhveVhaelM3R0kyRHB2UjdWTkI4SjFTRzlmS0NGbWtTOG5DbDBicVRyZ3A2WlNjSVh4RUQ1YVNyMmpPRHpObnpmUTRIdlpPWV9HZU9yRTNVWUFrZjFjVXBsQURzNGRHMWdsWm1IUzYzSHE5dG5jMDRNRzdaYk1XZXZfVzJmMzZJ?oc=5">Trade Spotlight: How should you trade Hero MotoCorp, InterGlobe Aviation, Eternal, Belrise Industries,...</a> (Moneycontrol.com, 26 Nov)
+   📰 <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPMjdNUk1oZzN4Z1hKMTljYUtZck1kejhVZzFHUktZcnNSQTl2ejdlUDRGdXMwZG9iVzNtQnZaUFpXRWpsRDlIR3BXc2NOLXJPc2x2cW92cWJWQkg5bVZnaW9mUXNEZVpNeWhwM0FDTjFZUUIwLXQyblJoemdWV0tlOVZCdlZXcTRhSEJFa2g2Z1dnTWJyUF9faTREV0pvMHYyUFN2SVR1YXhRd0NyQ1E2aHNHdWZQMWM?oc=5">BURN ETERNAL announce self-titled debut album + share new single “Wounds I’ve Made”</a> (Metal Planet Music, 25 Nov)
 
-**2. WELSPUNLIV** · Welspun Living Limited · score 66/100
-   Buy above: **₹279.55** (last close ₹270.76)
-   Stop-loss: **₹259.00** (−7.3%)
-   Target 1: ₹320.65 · Target 2: ₹341.20
-   Size: 9 shares ≈ ₹2,516, max loss ≈ ₹185
-   Why: 1.2% below its 20-day high, volume 1.1x average, RSI 64, ADX 36
-   📰 <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQNXgwWElnT1FqejljcGYxT0NHZ1JNVVk4QXdBdHhkVHFxUF95NWJtVi1tM2x4a3MtZXA0Y2o4bFRqbml5c0RPYXpUcDB0UnljcmkwRWdmeUhOc095M3o5bUhwSnpnZS1pWXBldVByQ084Y3A5emc0Ym9TWU5oamo5MG9nN3F6b2lqWjE3Y2lyREtfZHRMZlJEbFV6Z3FVNHp6bVZ3YVR5SmgxSHotYlhpVVVnWGtDR3VDemc?oc=5">Welspun Living to invest ₹3,200 crore; targets 200-300 bps EBITDA gain</a> (scanx.trade, 24 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTXJvWi0zTFk3X0tITlluU2NIZWdKNHRxRnFVWHhXTU5SLU14SUNTNUV2c3JvNzlDVXo4dXZvakd6NVhIbHdUN2l6M2RpSlc5eER6cnN3THdpa3FLVDZKU3Y5UXN3eHZ4RjNXTHdXUGxBemstZUJzX01wNXY5MzA4RTdmczV4cWd3T1ZhSjUyZXpTVk9FeHpObDV4c25wRjdMU2swSGU3TmhZRVhPaXliMFBHMWpaQ3hlUTZ4QXFSWF9PMVRMZVMwVWlWOGJqRkhl?oc=5">Welspun Living Ltd Hits All-Time High of Rs 273.80 as Momentum Builds Across Timeframes</a> (MarketsMojo, 24 Nov)
-
-**3. MAHABANK** · Bank of Maharashtra · score 65/100
-   Buy above: **₹100.95** (last close ₹97.56)
-   Stop-loss: **₹96.70** (−4.2%)
-   Target 1: ₹109.45 · Target 2: ₹113.70
-   Size: 47 shares ≈ ₹4,745, max loss ≈ ₹200
-   Why: 2.0% below its 20-day high, volume 1.5x average, RSI 72, ADX 36
-   📰 <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxQVDZCMW5RQXF5bkVlYmJFZ3dlbXE0QjVqVWRPanVWbklvSWtqdXREWjNUR2l5akFiWEk5bDdrMFBvd0JZV0xKMzVtUkljd3Mxd0hiVnRaSjVqRDdONXhyYU1hLUs1TkxzQkxiOVBkMVJub0hCSm5PeF9JRnp3MDJhOWpn?oc=5">Bank Of Maharashtra Share Price Fall and Sector Comparison</a> (Univest, 24 Nov)
-   📰 <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNS0dKcjBRR0ppbU1TZVQ2bXZZb0FaU0RJZHpYQnBZZGVQYXZPblVYTHdwbUQ3MENoejc0SnFUVnlJclF2S0pkUjgzWnlNczRhZEhxTmNzOVE1OTRsOGl1UWVzRk1veHphLU5CWlNCZmFBZFJtQXRxWmNRek9PNms0WTRNbEsyRnVIbzlaZQ?oc=5">Bank Of Maharashtra Share Price Today After 52-Week High</a> (Univest, 23 Nov)
-
-**4. GROWW** · Billionbrains Garage Ventures Limited · score 64/100
-   Buy above: **₹223.45** (last close ₹216.46)
-   Stop-loss: **₹211.40** (−5.4%)
-   Target 1: ₹247.55 · Target 2: ₹259.60
-   Size: 16 shares ≈ ₹3,575, max loss ≈ ₹193
-   Why: 7.3% below its 20-day high, volume 1.6x average, RSI 56, ADX 35
-   📰 <a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNXpyZ2lLUmJ0YUJIekF0NV84SGl0Z3ktQ19uRzA2N3ktVEpZVkdsQzhzc0U1d1ZGZnZ0SU1ad3M3c0dYZlduZVZjSV9TTV9BVWh5ZXg5RGk1b0syRFNjWENfbHpia2diR2k0ZmE0NUNxbll3eEI0WmVONkdWNDNGLVB2UERpZXdfQzZnWS1BMDBuTmNJUDNHdWRicVd5czgtaFRKYjY5aVVSUGhTeTRGbFBDMGVkZloyd1JKZndEcGZiQVhzckNuS3owOTY2VmUzMVlMVWtNcEp2a0pQbktaS0dQVUZnN1dyQVB4ZVN1dFdZUVR4TzJfYQ?oc=5">Billionbrains Garage Ventures Stock: Trading, Earnings and Momentum</a> (Kalkine India, 24 Nov)
-
-_Only 4 stock(s) scored 60+ for this list today._
+_Only 1 stock(s) scored 60+ for this list today._
 
 _Rules: buy only if the price trades above 'Buy above' within 3 trading days. Exit at the stop-loss, no exceptions. At Target 1 book half and move the stop to your buy price._
 
-👉 For live updates on a stock, reply e.g. <code>VIJAYA start</code>. Send <code>help</code> for all commands.
+👉 For live updates on a stock, reply e.g. <code>INDIGO start</code>. Send <code>help</code> for all commands.
 
-**Track record**: 22 closed trades, 9 wins, 13 losses, win rate 40.9%, average +1.36% per trade. 31 in trade, 11 waiting for entry.
+**Track record**: 24 closed trades, 10 wins, 14 losses, win rate 41.7%, average +1.22% per trade. 32 in trade, 14 waiting for entry.
 
 ⚠️ Computer-generated signals from price rules, for learning and paper trading. Not investment advice. Past patterns do not guarantee future moves.
